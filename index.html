@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>p2</title>
+    <script src="./d3.js"></script>
+    <style>
+        body { font-family: 'Barlow Condensed', Calibri, sans-serif; }
+        svg { border: solid #ccc 1px; }
+        .tooltip{
+            width:100px;
+            height:50px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="line"></div>​
+  <script type="text/javascript">
+    var w = 1440;
+    var h = 900;
+
+    var svg = d3.select("#line")
+      .append("svg")
+      .attr("width", w)
+      .attr("height", h)
+      .attr("id", "visualization")
+      .attr("xmlns", "http://www.w3.org/2000/svg");
+    var div=d3.select("#line")
+        .append("div")
+        .attr("class","tooltip")
+        .style("opacity",0);
+
+    var parseTime = d3.timeParse("%d-%b-%Y");
+    var formatYear=d3.timeFormat("%Y");
+//    var inter=d3.scaleTime().domain([parseTime("01-Jan-1937"),parseTime("12-Dec-2020")]).range([0, 300]);
+//    var data = [[0,0],[inter(parseTime("15-Dec-1997")),1800000000],[300,0]];
+    var data = [[0,0],[20,800000000],[10,850000000],[40,0]];
+    var x = d3.scaleLinear().domain([0, 40]).range([10, 1430]);
+    var y = d3.scaleLinear().domain([0, 1000000000]).range([890, 10]);
+    var line = d3.line()
+      .x(function(d) {return x(d[0]);})
+      .y(function(d) {return y(d[1]);})
+        .curve(d3.curveNatural);
+
+
+    function parseline(line){
+        return {
+            time:parseTime(line.year),
+            box_office:+line.box_office,
+            if_female:+line.female_lead,
+            if_black:+line.non_white_lead
+        }
+    }
+    d3.csv("./movie_actor.csv",parseline,function(data){
+//        console.log(data[0]);
+        var yearData=[];
+        var lineData=[[0,0]];
+        var dotData=[];
+        var j=0;
+        data.forEach(function(d){
+//            console.log(typeof(formatYear(d.time)));
+            if(formatYear(d.time)==="2015"){
+//                console.log(d);
+                j=j+1;
+                yearData.push({released:d.time,if_female:d.if_female,if_black:d.if_black,box_office:d.box_office});
+            }
+        });
+//        var lineData=[[0,0],[j/2,j],[j,0]];
+        console.log(j);
+//        console.log(yearData);
+        var inter=d3.scaleTime().domain([parseTime("01-Jan-2015"),parseTime("31-Dec-2015")]).range([0, j]);
+        var yearData1=yearData.slice(0,Math.floor((j+1)/2));
+        var yearData2=yearData.slice(Math.floor((j+1)/2),j);
+        yearData1.sort(function(x,y){
+            return d3.ascending(x.box_office,y.box_office);
+        });
+        console.log(yearData1);
+        yearData2.sort(function(x,y){
+            return d3.descending(x.box_office,y.box_office);
+        });
+        console.log(yearData2);
+        yearData=yearData1.concat(yearData2);
+        console.log(yearData);
+        yearData.forEach(function(d){
+           lineData.push([inter(d["released"]),d["box_office"]]);
+        });
+        lineData.push([j,0]);
+//        console.log(inter(yearData[0]["released"]));
+//        yearData.forEach(function(d){
+//           if(d.if_female===1||d.if_black===1){
+////               console.log(d);
+//               dotData.push(inter(d["released"]));
+//           }
+//        });
+//        dotData.sort(function(x,y){
+//            return d3.ascending(x[0],y[0]);
+//        });
+//        console.log(lineData);
+//        console.log(inter(yearData[0]["released"]));
+//        lineData=[[0,0],[inter(yearData[0]["released"]),yearData[0]["box_office"]],[j,0]];
+//        lineData.push([j,0]);
+//        var path = svg.append("path")
+//      .attr("d", line(lineData))
+//      .attr("stroke", "steelblue")
+//      .attr("stroke-width", "2")
+//      .attr("fill", "none");
+//
+//        var totalLength = path.node().getTotalLength();
+//
+//        path
+//            .attr("stroke-dasharray", totalLength + " " + totalLength)
+//            .attr("stroke-dashoffset", totalLength)
+//            .transition()
+//            .duration(2000)
+//            .ease(d3.easeLinear)
+//            .attr("stroke-dashoffset", 0);
+//        plotdot(dotData); // plot dots
+    });
+    var path = svg.append("path")
+      .attr("d", line(data))
+      .attr("stroke", "steelblue")
+      .attr("stroke-width", "2")
+      .attr("fill", "none");
+
+        var totalLength = path.node().getTotalLength();
+
+        path
+            .attr("stroke-dasharray", totalLength + " " + totalLength)
+            .attr("stroke-dashoffset", totalLength)
+            .transition()
+            .duration(2000)
+            .ease(d3.easeLinear)
+            .attr("stroke-dashoffset", 0);
+//plotdot(data);
+
+    function plotdot(data){
+      var dots=svg.selectAll(".dot")
+//          .filter(function(d,i){return i!==1;})
+          .data(data);
+      dots.exit().remove();
+      dots.enter()
+          .append("circle")
+          .merge(dots)
+          .attr("class","dot")
+          .each(function(d,i){
+              if(i===1){
+                  d3.select(this).attr("cx",function(d){return x(d[0])})
+                    .attr("cy",function(d){return y(d[1])})
+                    .attr("r",3)
+                    .on("mouseover",function(d){
+                        div
+                          .html(d)
+                          .transition()
+                          .duration(500)
+                          .style("left",20+"px")
+                          .style("top",20+"px")
+                          .style("opacity",100);
+                    })
+                    .on("mouseout",function(d){
+                        div
+                            .transition()
+                            .duration(500)
+                            .style("opacity", 0);
+                    })
+                    .style("fill","#ff8004")
+                    .style("opacity",0)
+                    .transition()
+                    .delay(2000)
+                    .duration(2000)
+                    .style("opacity",100);
+                }
+            })
+        }
+
+  </script>
+</body>
+</html>

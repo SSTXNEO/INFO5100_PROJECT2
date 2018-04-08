@@ -1,0 +1,501 @@
+rank,title,studio,box_office,year
+1,Star Wars: The Force Awakens,BV,936662225,2015
+2,Avatar,Fox,760507625,2009
+3,Titanic,Par.,659363944,1997
+4,Jurassic World,Uni.,652270625,2015
+5,Black Panther,BV,643503634,2018
+6,The Avengers,BV,623357910,2012
+7,Star Wars: The Last Jedi,BV,620057903,2017
+8,The Dark Knight,WB,534858444,2008
+9,Rogue One: A Star Wars Story,BV,532177324,2016
+10,Beauty and the Beast&y=2017,BV,504014165,2017
+11,Finding Dory,BV,486295561,2016
+12,Star Wars: Episode I - The Phantom Menace,Fox,474544677,1999
+13,Star Wars,Fox,460998007,1977
+14,Avengers: Age of Ultron,BV,459005868,2015
+15,The Dark Knight Rises,WB,448139099,2012
+16,Shrek 2,DW,441226247,2004
+17,E.T.: The Extra-Terrestrial,Uni.,435110554,1982
+18,The Hunger Games: Catching Fire,LGF,424668047,2013
+19,Pirates of the Caribbean: Dead Man's Chest,BV,423315812,2006
+20,The Lion King,BV,422783777,1994
+21,Toy Story 3,BV,415004880,2010
+22,Wonder Woman,WB,412563408,2017
+23,Iron Man 3,BV,409013994,2013
+24,Captain America: Civil War,BV,408084349,2016
+25,The Hunger Games,LGF,408010692,2012
+26,Spider-Man,Sony,403706375,2002
+27,Jurassic Park,Uni.,402453882,1993
+28,Jumanji: Welcome to the Jungle,Sony,402340739,2017
+29,Transformers: Revenge of the Fallen,P/DW,402111870,2009
+30,Frozen,BV,400738009,2013
+31,Guardians of the Galaxy Vol. 2,BV,389813101,2017
+32,Harry Potter and the Deathly Hallows Part 2,WB,381011219,2011
+33,Finding Nemo,BV,380843261,2003
+34,Star Wars: Episode III - Revenge of the Sith,Fox,380270577,2005
+35,The Lord of the Rings: The Return of the King,NL,377845905,2003
+36,Spider-Man 2,Sony,373585825,2004
+37,The Passion of the Christ,NM,370782930,2004
+38,The Secret Life of Pets,Uni.,368384330,2016
+39,Despicable Me 2,Uni.,368061265,2013
+40,The Jungle Book&y=2016,BV,364001123,2016
+41,Deadpool,Fox,363070709,2016
+42,Inside Out,BV,356461711,2015
+43,Furious 7,Uni.,353007020,2015
+44,Transformers: Dark of the Moon,P/DW,352390543,2011
+45,American Sniper,WB,350126372,2014
+46,The Lord of the Rings: The Two Towers,NL,342551365,2002
+47,Zootopia,BV,341268248,2016
+48,The Hunger Games: Mockingjay - Part 1,LGF,337135885,2014
+49,Spider-Man 3,Sony,336530303,2007
+50,Minions,Uni.,336045770,2015
+51,Spider-Man: Homecoming,Sony,334201140,2017
+52,Alice in Wonderland&y=2010,BV,334191110,2010
+53,Guardians of the Galaxy,BV,333176600,2014
+54,Batman v Superman: Dawn of Justice,WB,330360194,2016
+55,Forrest Gump,Par.,330252182,1994
+56,It,WB (NL),327481748,2017
+57,Suicide Squad,WB,325100054,2016
+58,Shrek the Third,P/DW,322719944,2007
+59,Transformers,P/DW,319246193,2007
+60,Iron Man,Par.,318412101,2008
+61,Harry Potter and the Sorcerer's Stone,WB,317575550,2001
+62,Indiana Jones and the Kingdom of the Crystal Skull,Par.,317101119,2008
+63,The Lord of the Rings: The Fellowship of the Ring,NL,315544750,2001
+64,Thor: Ragnarok,BV,315058289,2017
+65,Iron Man 2,Par.,312433331,2010
+66,Star Wars: Episode II - Attack of the Clones,Fox,310676740,2002
+67,Pirates of the Caribbean: At World's End,BV,309420425,2007
+68,Return of the Jedi,Fox,309306177,1983
+69,Independence Day,Fox,306169268,1996
+70,Pirates of the Caribbean: The Curse of the Black Pearl,BV,305413918,2003
+71,Skyfall,Sony,304360277,2012
+72,The Hobbit: An Unexpected Journey,WB (NL),303003568,2012
+73,Harry Potter and the Half-Blood Prince,WB,301959197,2009
+74,The Twilight Saga: Eclipse,Sum.,300531751,2010
+75,The Twilight Saga: New Moon,Sum.,296623634,2009
+76,Harry Potter and the Deathly Hallows Part 1,WB,295983305,2010
+77,The Sixth Sense,BV,293506292,1999
+78,Up,BV,293004164,2009
+79,Inception,WB,292576195,2010
+80,The Twilight Saga: Breaking Dawn Part 2,LG/S,292324737,2012
+81,Harry Potter and the Order of the Phoenix,WB,292004738,2007
+82,"The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",BV,291710957,2005
+83,Man of Steel,WB,291045518,2013
+84,The Empire Strikes Back,Fox,290475067,1980
+85,Harry Potter and the Goblet of Fire,WB,290013036,2005
+86,"Monsters, Inc.",BV,289916256,2001
+87,Home Alone,Fox,285761243,1990
+88,The Hunger Games: Mockingjay - Part 2,LGF,281723902,2015
+89,The Matrix Reloaded,WB,281576461,2003
+90,The Twilight Saga: Breaking Dawn Part 1,Sum.,281287133,2011
+91,Meet the Fockers,Uni.,279261160,2004
+92,The Hangover,WB,277322503,2009
+93,Gravity,WB,274092705,2013
+94,Sing,Uni.,270395425,2016
+95,Monsters University,BV,268492764,2013
+96,Shrek,DW,267665011,2001
+97,Despicable Me 3,Uni.,264624300,2017
+98,The Amazing Spider-Man,Sony,262030663,2012
+99,Harry Potter and the Chamber of Secrets,WB,261988482,2002
+100,The Incredibles,BV,261441092,2004
+101,How the Grinch Stole Christmas,Uni.,260044825,2000
+102,Jaws,Uni.,260000000,1975
+103,Captain America: The Winter Soldier,BV,259766572,2014
+104,The Hobbit: The Desolation of Smaug,WB (NL),258366855,2013
+105,The LEGO Movie,WB,257760692,2014
+106,Star Trek,Par.,257730019,2009
+107,I Am Legend,WB,256393010,2007
+108,The Blind Side,WB,255959475,2009
+109,The Hobbit: The Battle of the Five Armies,WB (NL),255119788,2014
+110,The Hangover Part II,WB,254464305,2011
+111,Despicable Me,Uni.,251513985,2010
+112,Batman,WB,251188924,1989
+113,Night at the Museum,Fox,250863268,2006
+114,Men in Black,Sony,250690539,1997
+115,Harry Potter and the Prisoner of Azkaban,WB,249541069,2004
+116,Moana,BV,248757044,2016
+117,Raiders of the Lost Ark,Par.,248159971,1981
+118,Toy Story 2,BV,245852179,1999
+119,Transformers: Age of Extinction,Par.,245439076,2014
+120,Cars,BV,244082982,2006
+121,Bruce Almighty,Uni.,242829261,2003
+122,Ghostbusters,Col.,242212467,1984
+123,Twister,WB,241721524,1996
+124,My Big Fat Greek Wedding,IFC,241438208,2002
+125,Maleficent,BV,241410378,2014
+126,Pirates of the Caribbean: On Stranger Tides,BV,241071802,2011
+127,Shrek Forever After,P/DW,238736787,2010
+128,Fast & Furious 6,Uni.,238679850,2013
+129,Brave,BV,237283207,2012
+130,Oz The Great and Powerful,BV,234911825,2013
+131,Beverly Hills Cop,Par.,234760478,1984
+132,X-Men: The Last Stand,Fox,234362462,2006
+133,War of the Worlds,Par.,234280354,2005
+134,Fantastic Beasts and Where To Find Them,WB,234037575,2016
+135,X-Men: Days of Future Past,Fox,233921534,2014
+136,Cast Away,Fox,233632142,2000
+137,The Exorcist,WB,232906145,1973
+138,Doctor Strange,BV,232641920,2016
+139,The Lost World: Jurassic Park,Uni.,229086679,1997
+140,Justice League,WB,229024295,2017
+141,Star Trek Into Darkness,Par.,228778661,2013
+142,The Martian,Fox,228433663,2015
+143,Signs,BV,227966634,2002
+144,Hancock,Sony,227946274,2008
+145,The Bourne Ultimatum,Uni.,227471070,2007
+146,Logan,Fox,226277068,2017
+147,Rush Hour 2,NL,226164286,2001
+148,The Fate of the Furious,Uni.,226008385,2017
+149,WALL-E,BV,223808164,2008
+150,Big Hero 6,BV,222527828,2014
+151,National Treasure: Book of Secrets,BV,219964115,2007
+152,Alvin and the Chipmunks: The Squeakquel,Fox,219614612,2009
+153,Mrs. Doubtfire,Fox,219195243,1993
+154,Beauty and the Beast,BV,218967620,1991
+155,Ted,Uni.,218815487,2012
+156,King Kong,Uni.,218080025,2005
+157,Ghost,Par.,217631306,1990
+158,How to Train Your Dragon,P/DW,217581231,2010
+159,The Da Vinci Code,Sony,217536138,2006
+160,Aladdin,BV,217350219,1992
+161,Alvin and the Chipmunks,Fox,217326974,2007
+162,Saving Private Ryan,DW,216540909,1998
+163,Madagascar 3: Europe's Most Wanted,P/DW,216391482,2012
+164,Kung Fu Panda,P/DW,215434591,2008
+165,Mission: Impossible II,Par.,215409889,2000
+166,X-Men 2,Fox,214949694,2003
+167,The Lorax,Uni.,214030500,2012
+168,Austin Powers in Goldmember,NL,213307889,2002
+169,300,WB,210614939,2007
+170,Back to the Future,Uni.,210609762,1985
+171,Fast Five,Uni.,209837675,2011
+172,Coco,BV,209454871,2017
+173,Mission: Impossible - Ghost Protocol,Par.,209397903,2011
+174,Wedding Crashers,NL,209255921,2005
+175,Sherlock Holmes,WB,209028679,2009
+176,Dawn of the Planet of the Apes,Fox,208545589,2014
+177,Batman Begins,WB,206852432,2005
+178,Charlie and the Chocolate Factory,WB,206459076,2005
+179,Ratatouille,BV,206445654,2007
+180,Thor: The Dark World,BV,206362140,2013
+181,Austin Powers: The Spy Who Shagged Me,NL,206040086,1999
+182,Terminator 2: Judgment Day,TriS,205881154,1991
+183,The Amazing Spider-Man 2,Sony,202853933,2014
+184,World War Z,Par.,202359711,2013
+185,The Mummy Returns,Uni.,202019785,2001
+186,Armageddon,BV,201578182,1998
+187,Cinderella&y=2015,BV,201151353,2015
+188,Tangled,BV,200821936,2010
+189,Godzilla&y=2014,WB,200676069,2014
+190,Superman Returns,WB,200081192,2006
+191,Spectre,Sony,200074609,2015
+192,Gone with the Wind,MGM,198676459,1939
+193,Pearl Harbor,BV,198542554,2001
+194,Monsters vs. Aliens,P/DW,198351526,2009
+195,Happy Feet,WB,198000317,2006
+196,Indiana Jones and the Last Crusade,Par.,197171806,1989
+197,Ice Age: Dawn of the Dinosaurs,Fox,196573705,2009
+198,Ice Age: The Meltdown,Fox,195330621,2006
+199,Mission: Impossible - Rogue Nation,Par.,195042377,2015
+200,Madagascar,DW,193595521,2005
+201,Twilight,Sum.,192769854,2008
+202,Toy Story,BV,191796233,1995
+203,22 Jump Street,Sony,191719337,2014
+204,Cars 2,BV,191452396,2011
+205,Teenage Mutant Ninja Turtles&y=2014,Par.,191204754,2014
+206,Men in Black II,Sony,190418803,2002
+207,Wreck-It Ralph,BV,189422889,2012
+208,Grease,Par.,188755690,1978
+209,Dunkirk,WB,188373161,2017
+210,Interstellar,Par.,188020017,2014
+211,Gladiator,DW,187705427,2000
+212,The Croods,Fox,187168425,2013
+213,Sherlock Holmes: A Game of Shadows,WB,186848418,2011
+214,The Day After Tomorrow,Fox,186740799,2004
+215,The Polar Express,WB,186493472,2004
+216,Mr. & Mrs. Smith,Fox,186336279,2005
+217,Snow White and the Seven Dwarfs,Dis.,184925486,1937
+218,Pitch Perfect 2,Uni.,184296230,2015
+219,Dances with Wolves,Orion,184208848,1990
+220,Batman Forever,WB,184031112,1995
+221,The Fugitive,WB,183875760,1993
+222,The Revenant,Fox,183637894,2015
+223,Ocean's Eleven,WB,183417150,2001
+224,The Simpsons Movie,Fox,183135014,2007
+225,What Women Want,Par.,182811707,2000
+226,The Perfect Storm,WB,182618434,2000
+227,Lincoln,BV,182207973,2012
+228,Liar Liar,Uni.,181410615,1997
+229,Jurassic Park III,Uni.,181171875,2001
+230,Thor,Par.,181030624,2011
+231,Mission: Impossible,Par.,180981856,1996
+232,Ant-Man,BV,180202163,2015
+233,Planet of the Apes&y=2001,Fox,180011740,2001
+234,Madagascar: Escape 2 Africa,P/DW,180010950,2008
+235,X-Men Origins: Wolverine,Fox,179883157,2009
+236,Indiana Jones and the Temple of Doom,Par.,179870271,1984
+237,Top Gun,Par.,179800601,1986
+238,Hitch,Sony,179495555,2005
+239,MIB 3,Sony,179020854,2012
+240,Pretty Woman,BV,178406268,1990
+241,Home&y=2015,Fox,177397510,2015
+242,Night at the Museum: Battle of the Smithsonian,Fox,177243721,2009
+243,Tootsie,Col.,177200000,1982
+244,How to Train Your Dragon 2,Fox,177002924,2014
+245,Rise of the Planet of the Apes,Fox,176760185,2011
+246,Captain America: The First Avenger,Par.,176654505,2011
+247,The Karate Kid,Sony,176591618,2010
+248,There's Something About Mary,Fox,176484651,1998
+249,Ice Age,Fox,176387405,2002
+250,The Bourne Supremacy,Uni.,176241941,2004
+251,Get Out,Uni.,176040665,2017
+252,The LEGO Batman Movie,WB,175750384,2017
+253,The Boss Baby,Fox,175003033,2017
+254,Crocodile Dundee,Par.,174803506,1986
+255,Apollo 13,Uni.,173837933,1995
+256,Home Alone 2: Lost in New York,Fox,173585516,1992
+257,Elf,NL,173398518,2003
+258,National Treasure,BV,173008894,2004
+259,Air Force One,Sony,172956409,1997
+260,Rain Man,MGM,172825435,1988
+261,Pirates of the Caribbean: Dead Men Tell No Tales,BV,172558876,2017
+262,Tron Legacy,BV,172062763,2010
+263,The Greatest Showman,Fox,171629190,2017
+264,The Matrix,WB,171479930,1999
+265,True Grit,Par.,171243005,2010
+266,Tarzan,BV,171091819,1999
+267,A Beautiful Mind,Uni.,170742341,2001
+268,Chicago,Mira.,170687518,2002
+269,The Help,BV,169708112,2011
+270,Hotel Transylvania 2,Sony,169700110,2015
+271,Hidden Figures,Fox,169607287,2016
+272,Bridesmaids,Uni.,169106725,2011
+273,Quantum of Solace,Sony,168368427,2008
+274,Wild Hogs,BV,168273550,2007
+275,Kong: Skull Island,WB,168052812,2017
+276,Three Men and a Baby,BV,167780960,1987
+277,Gone Girl,Fox,167767189,2014
+278,Casino Royale,Sony,167445960,2006
+279,Meet the Parents,Uni.,166244045,2000
+280,Fifty Shades of Grey,Uni.,166167230,2015
+281,2012,Sony,166112167,2009
+282,Robin Hood: Prince of Thieves,WB,165493908,1991
+283,Kung Fu Panda 2,P/DW,165249063,2011
+284,Hannibal,MGM,165092268,2001
+285,Catch Me If You Can,DW,164615351,2002
+286,The Proposal,BV,163958031,2009
+287,The Pursuit of Happyness,Sony,163566459,2006
+288,Big Daddy,Sony,163479795,1999
+289,Clash of the Titans&y=2010,WB,163214888,2010
+290,The SpongeBob Movie: Sponge Out of Water,Par.,162994032,2015
+291,Batman Returns,WB,162831698,1992
+292,Django Unchained,Wein.,162805434,2012
+293,A Bug's Life,BV,162798565,1998
+294,Jason Bourne,Uni.,162434410,2016
+295,Grown Ups,Sony,162001186,2010
+296,The Waterboy,BV,161491646,1998
+297,Ice Age: Continental Drift,Fox,161321843,2012
+298,Straight Outta Compton,Uni.,161197785,2015
+299,Die Another Day,MGM,160942139,2002
+300,Shark Tale,DW,160861908,2004
+301,The Heat,Fox,159582188,2013
+302,Star Trek Beyond,Par.,158848340,2016
+303,The Sound of Music,Fox,158671368,1965
+304,The Firm,Par.,158348367,1993
+305,The Longest Yard,Par.,158119460,2005
+306,X-Men,Fox,157299717,2000
+307,Scary Movie,Mira.,157019771,2000
+308,Fatal Attraction,Par.,156645693,1987
+309,Who Framed Roger Rabbit,BV,156452370,1988
+310,The Sting,Uni.,156000000,1973
+311,What Lies Beneath,DW,155464351,2000
+312,X-Men: Apocalypse,Fox,155442489,2016
+313,The Mummy,Uni.,155385488,1999
+314,Snow White and the Huntsman,Uni.,155332381,2012
+315,San Andreas,WB (NL),155190832,2015
+316,Fast and Furious,Uni.,155064265,2009
+317,Over the Hedge,P/DW,155019340,2006
+318,Fantastic Four&y=2015,Fox,154696080,2005
+319,Horton Hears a Who!,Fox,154529439,2008
+320,Mad Max: Fury Road,WB,154058340,2015
+321,Jerry Maguire,Sony,153952592,1996
+322,Trolls,Fox,153707064,2016
+323,Beverly Hills Cop II,Par.,153665036,1987
+324,Scooby-Doo,WB,153294164,2002
+325,Gremlins,WB,153083102,1984
+326,Cars 3,BV,152901115,2017
+327,Sex and the City,WB (NL),152647258,2008
+328,Runaway Bride,Par.,152257509,1999
+329,La La Land,LG/S,151101803,2016
+330,Divergent,LG/S,150947895,2014
+331,Rambo: First Blood Part II,TriS,150415432,1985
+332,We're the Millers,WB (NL),150394119,2013
+333,Terminator 3: Rise of the Machines,WB,150371112,2003
+334,Daddy's Home,Par.,150357137,2015
+335,G.I. Joe: The Rise of Cobra,Par.,150201498,2009
+336,Neighbors,Uni.,150157400,2014
+337,American Hustle,Sony,150117807,2013
+338,Puss in Boots,P/DW,149260504,2011
+339,Les Miserables&y=2012,Uni.,148809770,2012
+340,Knocked Up,Uni.,148768917,2007
+341,As Good as It Gets,Sony,148478011,1997
+342,Little Fockers,Uni.,148438600,2010
+343,Megamind,P/DW,148415853,2010
+344,Hotel Transylvania,Sony,148313048,2012
+345,Talladega Nights: The Ballad of Ricky Bobby,Sony,148213377,2006
+346,Gran Torino,WB,148095302,2008
+347,Lethal Weapon 2,WB,147253986,1989
+348,War for the Planet of the Apes,Fox,146880162,2017
+349,X-Men: First Class,Fox,146408305,2011
+350,Paul Blart: Mall Cop,Sony,146336178,2009
+351,True Lies,Fox,146282411,1994
+352,Lilo & Stitch,BV,145794338,2002
+353,American Pie 2,Uni.,145103595,2001
+354,Taken,Fox,145000989,2009
+355,101 Dalmatians,Dis.,144880014,1961
+356,The Great Gatsby&y=2013,WB,144840419,2013
+357,The Santa Clause,BV,144833357,1994
+358,"I, Robot",Fox,144801023,2004
+359,Lethal Weapon 3,WB,144731527,1992
+360,The Fast and the Furious,Uni.,144533925,2001
+361,Doctor Dolittle,Fox,144156605,1998
+362,Mamma Mia!,Uni.,144130063,2008
+363,Rio,Fox,143619809,2011
+364,Kung Fu Panda 3,Fox,143528619,2016
+365,Juno,FoxS,143495265,2007
+366,Marley & Me,Fox,143153751,2008
+367,The Smurfs,Sony,142614158,2011
+368,XXX,SonR,142109382,2002
+369,The Jungle Book,Dis.,141843612,1967
+370,The Chronicles of Narnia: Prince Caspian,BV,141621490,2008
+371,National Lampoon's Animal House,Uni.,141600000,1978
+372,Pocahontas,BV,141579773,1995
+373,A Few Good Men,Col.,141340178,1992
+374,Slumdog Millionaire,FoxS,141319928,2008
+375,Rush Hour,NL,141186864,1998
+376,The Blair Witch Project,Art.,140539099,1999
+377,Deep Impact,Par.,140464664,1998
+378,Rush Hour 3,NL,140125968,2007
+379,Look Who's Talking,TriS,140088813,1989
+380,Stuart Little,Sony,140035367,1999
+381,Taken 2,Fox,139854287,2012
+382,Sister Act,BV,139605150,1992
+383,Matrix Revolutions,WB,139313948,2003
+384,The Santa Clause 2,BV,139236327,2002
+385,The King's Speech,Wein.,138797449,2010
+386,Cheaper by the Dozen,Fox,138614544,2003
+387,Bad Boys II,Sony,138608444,2003
+388,Platoon,Orion,138530565,1986
+389,21 Jump Street,Sony,138447667,2012
+390,Good Will Hunting,Mira.,138433435,1997
+391,Split,Uni.,138291365,2017
+392,A Christmas Carol&y=2009,BV,137855863,2009
+393,Dinosaur,BV,137748063,2000
+394,The Conjuring,WB (NL),137400141,2013
+395,Click,SonR,137355633,2006
+396,The Green Mile,WB,136801374,1999
+397,Ransom,BV,136492681,1996
+398,Godzilla,Sony,136314294,1998
+399,101 Dalmatians&y=1996,BV,136189294,1996
+400,Argo,WB,136025503,2012
+401,Anger Management,SonR,135645823,2003
+402,Chicken Little,BV,135386665,2005
+403,Teenage Mutant Ninja Turtles,NL,135265915,1990
+404,Close Encounters of the Third Kind,Col.,135189114,1977
+405,Patch Adams,Uni.,135026902,1998
+406,The Godfather,Par.,134966411,1972
+407,Ride Along,Uni.,134938200,2014
+408,The Incredible Hulk,Uni.,134806913,2008
+409,Live Free or Die Hard,Fox,134529403,2007
+410,Wanted,Uni.,134508551,2008
+411,Identity Thief,Uni.,134506920,2013
+412,Superman,WB,134218018,1978
+413,The Rock,BV,134069511,1996
+414,Mission: Impossible III,Par.,134029801,2006
+415,Grown Ups 2,Sony,133668525,2013
+416,Troy,WB,133378256,2004
+417,Angels & Demons,Sony,133375846,2009
+418,Alvin and the Chipmunks: Chipwrecked,Fox,133110742,2011
+419,Bringing Down the House,BV,132716677,2003
+420,The Wolverine,Fox,132556852,2013
+421,Wonder,LGF,132422809,2017
+422,The Departed,WB,132384315,2006
+423,Hulk,Uni.,132177234,2003
+424,Silver Linings Playbook,Wein.,132092958,2012
+425,Minority Report,Fox,132072926,2002
+426,Fantastic 4: Rise of the Silver Surfer,Fox,131921738,2007
+427,The Last Airbender,Par.,131772187,2010
+428,Rio 2,Fox,131538435,2014
+429,Lara Croft: Tomb Raider,Par.,131168070,2001
+430,The Silence of the Lambs,Orion,130742922,1991
+431,"Honey, I Shrunk the Kids",BV,130724172,1989
+432,The Flintstones,Uni.,130531208,1994
+433,Lethal Weapon 4,WB,130444603,1998
+434,Get Smart,WB,130319208,2008
+435,Insurgent,LG/S,130179072,2015
+436,The Peanuts Movie,Fox,130178411,2015
+437,Transformers: The Last Knight,Par.,130168683,2017
+438,American Gangster,Uni.,130164645,2007
+439,American Beauty,DW,130096601,1999
+440,An Officer and a Gentleman,Par.,129795554,1982
+441,The Ring,DW,129128133,2002
+442,The Nutty Professor&y=1996,Uni.,128814019,1996
+443,Borat: Cultural Learnings of America for Make Benefit Glorious Nation of Kazakhstan,Fox,128505958,2006
+444,Ghostbusters (2016),Sony,128350574,2016
+445,Kingsman: The Secret Service,Fox,128261724,2015
+446,Robots,Fox,128200012,2005
+447,Coming to America,Par.,128152301,1988
+448,"Crouching Tiger, Hidden Dragon",SPC,128078872,2000
+449,Shutter Island,Par.,128012934,2010
+450,Into the Woods,BV,128002372,2014
+451,Rocky IV,UA,127873716,1985
+452,Enchanted,BV,127807262,2007
+453,The Curious Case of Benjamin Button,Par.,127509326,2008
+454,Central Intelligence,WB (NL),127440871,2016
+455,Anchorman 2: The Legend Continues,Par.,127352707,2013
+456,Sweet Home Alabama,BV,127223418,2002
+457,Dumb and Dumber,NL,127175374,1994
+458,2 Fast 2 Furious,Uni.,127154901,2003
+459,My Best Friend's Wedding,Sony,127120029,1997
+460,Super 8,Par.,127004179,2011
+461,The World Is Not Enough,MGM,126943684,1999
+462,Smokey and the Bandit,Uni.,126737428,1977
+463,Sleepless in Seattle,TriS,126680884,1993
+464,Lucy,Uni.,126663600,2014
+465,The Legend of Tarzan,WB,126643061,2016
+466,Bee Movie,P/DW,126631277,2007
+467,Prometheus,Fox,126477084,2012
+468,Safe House,Uni.,126373434,2012
+469,Mr. Deeds,Sony,126293452,2002
+470,The Truman Show,Par.,125618201,1998
+471,Erin Brockovich,Uni.,125595205,2000
+472,Ocean's Twelve,WB,125544280,2004
+473,Terminator Salvation,WB,125322469,2009
+474,Charlie's Angels,Sony,125305545,2000
+475,Tomorrow Never Dies,MGM,125304276,1997
+476,Lone Survivor,Uni.,125095601,2013
+477,Sully,WB,125070033,2016
+478,Rocky III,UA,125049125,1982
+479,The Vow,SGem,125014030,2012
+480,Life of Pi,Fox,124987023,2012
+481,The Fault in our Stars,Fox,124872350,2014
+482,Cloudy with a Chance of Meatballs,Sony,124870275,2009
+483,The Devil Wears Prada,Fox,124740460,2006
+484,Something's Gotta Give,Sony,124728738,2003
+485,Traffic,USA,124115725,2000
+486,The Birdcage,MGM,124060553,1996
+487,City Slickers,Col.,124033791,1991
+488,"Good Morning, Vietnam",BV,123922370,1987
+489,Rango,Par.,123477607,2011
+490,Nutty Professor II: The Klumps,Uni.,123309890,2000
+491,The Good Dinosaur,BV,123087120,2015
+492,G.I. Joe: Retaliation,Par.,122523060,2013
+493,Clear and Present Danger,Par.,122187717,1994
+494,The Hunt for Red October,Par.,122012643,1990
+495,The Bodyguard,WB,122006740,1992
+496,Wayne's World,Par.,121697323,1992
+497,The Bourne Identity,Uni.,121661683,2002
+498,Superbad,Sony,121463226,2007
+499,Speed,Fox,121248145,1994
+500,50 First Dates,Sony,120908074,2004

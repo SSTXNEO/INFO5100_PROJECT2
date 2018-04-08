@@ -1,0 +1,278 @@
+,rank,title,studio,box_office,year,actor1,actor2,actor3,actor4,female_lead,non_white_lead
+0,1,Star Wars: The Force Awakens,BV,936662225,2015,Harrison Ford, Mark Hamill, Carrie Fisher, Adam Driver,0,0
+1,2,Avatar,Fox,760507625,2009,Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang,0,0
+2,3,Titanic,Par.,659363944,1997,Leonardo DiCaprio, Kate Winslet, Billy Zane, Kathy Bates,0,0
+3,4,Jurassic World,Uni.,652270625,2015,Chris Pratt, Bryce Dallas Howard, Irrfan Khan, Vincent D'Onofrio,0,0
+4,5,Black Panther,BV,643503634,2018,Chadwick Boseman, Michael B. Jordan, Lupita Nyong'o, Danai Gurira,0,1
+5,6,The Avengers,BV,623357910,2012,Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth,0,0
+6,7,Star Wars: The Last Jedi,BV,620057903,2017,Mark Hamill, Carrie Fisher, Adam Driver, Daisy Ridley,0,0
+7,8,The Dark Knight,WB,534858444,2008,Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine,0,0
+8,9,Rogue One: A Star Wars Story,BV,532177324,2016,Felicity Jones, Diego Luna, Alan Tudyk, Donnie Yen,1,0
+9,10,Beauty and the Beast&y=2017,BV,504014165,2017,Emma Watson, Dan Stevens, Luke Evans, Josh Gad,1,0
+10,11,Finding Dory,BV,486295561,2016,Ellen DeGeneres, Albert Brooks, Ed O'Neill, Kaitlin Olson,1,0
+11,12,Star Wars: Episode I - The Phantom Menace,Fox,474544677,1999,Liam Neeson, Ewan McGregor, Natalie Portman, Jake Lloyd,0,0
+12,13,Star Wars,Fox,460998007,1977,Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing,0,0
+13,14,Avengers: Age of Ultron,BV,459005868,2015,Robert Downey Jr., Chris Hemsworth, Mark Ruffalo, Chris Evans,0,0
+14,15,The Dark Knight Rises,WB,448139099,2012,Christian Bale, Gary Oldman, Tom Hardy, Joseph Gordon-Levitt,0,0
+15,16,Shrek 2,DW,441226247,2004,Mike Myers, Eddie Murphy, Cameron Diaz, Julie Andrews,0,0
+16,17,E.T.: The Extra-Terrestrial,Uni.,435110554,1982,Dee Wallace, Henry Thomas, Peter Coyote, Robert MacNaughton,1,0
+17,18,The Hunger Games: Catching Fire,LGF,424668047,2013,Jennifer Lawrence, Liam Hemsworth, Jack Quaid, Taylor St. Clair,1,0
+18,19,Pirates of the Caribbean: Dead Man's Chest,BV,423315812,2006,Johnny Depp, Orlando Bloom, Keira Knightley, Jack Davenport,0,0
+19,20,The Lion King,BV,422783777,1994,Rowan Atkinson, Matthew Broderick, Niketa Calame, Jim Cummings,0,0
+20,21,Toy Story 3,BV,415004880,2010,Tom Hanks, Tim Allen, Joan Cusack, Ned Beatty,0,0
+21,22,Wonder Woman,WB,412563408,2017,Gal Gadot, Chris Pine, Connie Nielsen, Robin Wright,1,0
+22,23,Iron Man 3,BV,409013994,2013,Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Guy Pearce,0,0
+23,24,Captain America: Civil War,BV,408084349,2016,Chris Evans, Robert Downey Jr., Scarlett Johansson, Sebastian Stan,0,0
+24,25,The Hunger Games,LGF,408010692,2012,Stanley Tucci, Wes Bentley, Jennifer Lawrence, Willow Shields,1,0
+25,26,Spider-Man,Sony,403706375,2002,Tobey Maguire, Willem Dafoe, Kirsten Dunst, James Franco,0,0
+26,27,Jurassic Park,Uni.,402453882,1993,Sam Neill, Laura Dern, Jeff Goldblum, Richard Attenborough,0,0
+27,28,Jumanji: Welcome to the Jungle,Sony,402340739,2017,Dwayne Johnson, Kevin Hart, Jack Black, Karen Gillan,0,1
+28,29,Transformers: Revenge of the Fallen,P/DW,402111870,2009,Shia LaBeouf, Megan Fox, Josh Duhamel, Tyrese Gibson,0,0
+29,30,Frozen,BV,400738009,2013,Kristen Bell, Idina Menzel, Jonathan Groff, Josh Gad,1,0
+30,31,Guardians of the Galaxy Vol. 2,BV,389813101,2017,Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel,0,0
+31,32,Harry Potter and the Deathly Hallows Part 2,WB,381011219,2011,Ralph Fiennes, Michael Gambon, Alan Rickman, Daniel Radcliffe,0,0
+32,33,Finding Nemo,BV,380843261,2003,Albert Brooks, Ellen DeGeneres, Alexander Gould, Willem Dafoe,0,0
+33,34,Star Wars: Episode III - Revenge of the Sith,Fox,380270577,2005,Ewan McGregor, Natalie Portman, Hayden Christensen, Ian McDiarmid,0,0
+34,35,The Lord of the Rings: The Return of the King,NL,377845905,2003,Noel Appleby, Ali Astin, Sean Astin, David Aston,0,0
+35,36,Spider-Man 2,Sony,373585825,2004,Tobey Maguire, Kirsten Dunst, James Franco, Alfred Molina,0,0
+36,37,The Passion of the Christ,NM,370782930,2004,Jim Caviezel, Maia Morgenstern, Christo Jivkov, Francesco De Vito,0,0
+37,38,The Secret Life of Pets,Uni.,368384330,2016,Louis C.K., Eric Stonestreet, Kevin Hart, Jenny Slate,0,0
+38,39,Despicable Me 2,Uni.,368061265,2013,Steve Carell, Kristen Wiig, Benjamin Bratt, Miranda Cosgrove,0,0
+39,40,The Jungle Book&y=2016,BV,364001123,2016,Neel Sethi, Bill Murray, Ben Kingsley, Idris Elba,0,1
+40,41,Deadpool,Fox,363070709,2016,Ryan Reynolds, Karan Soni, Ed Skrein, Michael Benyaer,0,0
+41,42,Inside Out,BV,356461711,2015,Amy Poehler, Phyllis Smith, Richard Kind, Bill Hader,1,0
+42,43,Furious 7,Uni.,353007020,2015,Vin Diesel, Paul Walker, Jason Statham, Michelle Rodriguez,0,1
+43,44,Transformers: Dark of the Moon,P/DW,352390543,2011,Shia LaBeouf, Rosie Huntington-Whiteley, Josh Duhamel, John Turturro,0,0
+44,45,American Sniper,WB,350126372,2014,Bradley Cooper, Kyle Gallner, Cole Konis, Ben Reed,0,0
+45,46,The Lord of the Rings: The Two Towers,NL,342551365,2002,Bruce Allpress, Sean Astin, John Bach, Sala Baker,0,0
+46,47,Zootopia,BV,341268248,2016,Ginnifer Goodwin, Jason Bateman, Idris Elba, Jenny Slate,0,0
+47,48,The Hunger Games: Mockingjay - Part 1,LGF,337135885,2014,Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth, Woody Harrelson,1,0
+48,49,Spider-Man 3,Sony,336530303,2007,Tobey Maguire, Kirsten Dunst, James Franco, Thomas Haden Church,0,0
+49,50,Minions,Uni.,336045770,2015,Sandra Bullock, Jon Hamm, Michael Keaton, Allison Janney,1,0
+50,51,Spider-Man: Homecoming,Sony,334201140,2017,Tom Holland, Michael Keaton, Robert Downey Jr., Marisa Tomei,0,0
+51,52,Alice in Wonderland&y=2010,BV,334191110,2010,Johnny Depp, Mia Wasikowska, Helena Bonham Carter, Anne Hathaway,0,0
+52,53,Guardians of the Galaxy,BV,333176600,2014,Chris Pratt, Zoe Saldana, Dave Bautista, Vin Diesel,0,0
+53,54,Batman v Superman: Dawn of Justice,WB,330360194,2016,Ben Affleck, Henry Cavill, Amy Adams, Jesse Eisenberg,0,0
+54,55,Forrest Gump,Par.,330252182,1994,Tom Hanks, Rebecca Williams, Sally Field, Michael Conner Humphreys,0,0
+55,56,It,WB (NL),327481748,2017,Jaeden Lieberher, Jeremy Ray Taylor, Sophia Lillis, Finn Wolfhard,0,0
+56,57,Suicide Squad,WB,325100054,2016,Will Smith, Jaime FitzSimons, Ike Barinholtz, Margot Robbie,0,1
+57,58,Shrek the Third,P/DW,322719944,2007,Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas,0,0
+58,59,Transformers,P/DW,319246193,2007,Shia LaBeouf, Megan Fox, Josh Duhamel, Tyrese Gibson,0,0
+59,60,Iron Man,Par.,318412101,2008,Robert Downey Jr., Terrence Howard, Jeff Bridges, Gwyneth Paltrow,0,0
+60,61,Harry Potter and the Sorcerer's Stone,WB,317575550,2001,Richard Harris, Maggie Smith, Robbie Coltrane, Saunders Triplets,0,0
+61,62,Indiana Jones and the Kingdom of the Crystal Skull,Par.,317101119,2008,Harrison Ford, Cate Blanchett, Karen Allen, Shia LaBeouf,0,0
+62,63,The Lord of the Rings: The Fellowship of the Ring,NL,315544750,2001,Alan Howard, Noel Appleby, Sean Astin, Sala Baker,0,0
+63,64,Thor: Ragnarok,BV,315058289,2017,Chris Hemsworth, Tom Hiddleston, Cate Blanchett, Idris Elba,0,0
+64,65,Iron Man 2,Par.,312433331,2010,Robert Downey Jr., Gwyneth Paltrow, Don Cheadle, Scarlett Johansson,0,0
+65,66,Star Wars: Episode II - Attack of the Clones,Fox,310676740,2002,Ewan McGregor, Natalie Portman, Hayden Christensen, Christopher Lee,0,0
+66,67,Pirates of the Caribbean: At World's End,BV,309420425,2007,Johnny Depp, Geoffrey Rush, Orlando Bloom, Keira Knightley,0,0
+67,68,Return of the Jedi,Fox,309306177,1983,Mark Hamill, Harrison Ford, Carrie Fisher, Billy Dee Williams,0,0
+68,69,Independence Day,Fox,306169268,1996,Will Smith, Bill Pullman, Jeff Goldblum, Mary McDonnell,0,0
+69,70,Pirates of the Caribbean: The Curse of the Black Pearl,BV,305413918,2003,Johnny Depp, Geoffrey Rush, Orlando Bloom, Keira Knightley,0,0
+70,71,Skyfall,Sony,304360277,2012,Daniel Craig, Judi Dench, Javier Bardem, Ralph Fiennes,0,0
+71,72,The Hobbit: An Unexpected Journey,WB (NL),303003568,2012,Ian McKellen, Martin Freeman, Richard Armitage, Ken Stott,0,0
+72,73,Harry Potter and the Half-Blood Prince,WB,301959197,2009,Daniel Radcliffe, Michael Gambon, Dave Legeno, Elarica Johnson,0,0
+73,74,The Twilight Saga: Eclipse,Sum.,300531751,2010,Xavier Samuel, Kristen Stewart, Robert Pattinson, Billy Burke,1,0
+74,75,The Twilight Saga: New Moon,Sum.,296623634,2009,Kristen Stewart, Christina Jastrzembska, Robert Pattinson, Billy Burke,1,0
+75,76,Harry Potter and the Deathly Hallows Part 1,WB,295983305,2010,Bill Nighy, Emma Watson, Richard Griffiths, Harry Melling,0,0
+76,77,The Sixth Sense,BV,293506292,1999,Bruce Willis, Haley Joel Osment, Toni Collette, Olivia Williams,0,0
+77,78,Up,BV,293004164,2009,Edward Asner, Christopher Plummer, Jordan Nagai, Bob Peterson,0,0
+78,79,Inception,WB,292576195,2010,Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page, Tom Hardy,0,0
+79,80,The Twilight Saga: Breaking Dawn Part 2,LG/S,292324737,2012,Kristen Stewart, Robert Pattinson, Taylor Lautner, Peter Facinelli,1,0
+80,81,Harry Potter and the Order of the Phoenix,WB,292004738,2007,Daniel Radcliffe, Harry Melling, Jason Boyd, Richard Macklin,0,0
+81,82,"The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",BV,291710957,2005,Georgie Henley, Skandar Keynes, William Moseley, Anna Popplewell,0,0
+82,83,Man of Steel,WB,291045518,2013,Henry Cavill, Amy Adams, Michael Shannon, Diane Lane,0,0
+83,84,The Empire Strikes Back,Fox,290475067,1980,Mark Hamill, Harrison Ford, Carrie Fisher, Billy Dee Williams,0,0
+84,85,Harry Potter and the Goblet of Fire,WB,290013036,2005,Eric Sykes, Timothy Spall, David Tennant, Daniel Radcliffe,0,0
+85,86,"Monsters, Inc.",BV,289916256,2001,John Goodman, Billy Crystal, Mary Gibbs, Steve Buscemi,0,0
+86,87,Home Alone,Fox,285761243,1990,Macaulay Culkin, Joe Pesci, Daniel Stern, John Heard,0,0
+87,88,The Hunger Games: Mockingjay - Part 2,LGF,281723902,2015,Jennifer Lawrence, Josh Hutcherson, Liam Hemsworth, Woody Harrelson,1,0
+88,89,The Matrix Reloaded,WB,281576461,2003,Ray Anthony, Christine Anu, Andy Arness, Alima Ashton-Sheibu,0,0
+89,90,The Twilight Saga: Breaking Dawn Part 1,Sum.,281287133,2011,Taylor Lautner, Gil Birmingham, Billy Burke, Sarah Clarke,1,0
+90,91,Meet the Fockers,Uni.,279261160,2004,Robert De Niro, Ben Stiller, Dustin Hoffman, Barbra Streisand,0,0
+91,92,The Hangover,WB,277322503,2009,Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha,0,0
+92,93,Gravity,WB,274092705,2013,Sandra Bullock, George Clooney, Ed Harris, Orto Ignatiussen,1,0
+93,94,Sing,Uni.,270395425,2016,Matthew McConaughey, Reese Witherspoon, Seth MacFarlane, Scarlett Johansson,0,0
+94,95,Monsters University,BV,268492764,2013,Billy Crystal, John Goodman, Steve Buscemi, Helen Mirren,0,0
+95,96,Shrek,DW,267665011,2001,Mike Myers, Eddie Murphy, Cameron Diaz, John Lithgow,0,0
+96,97,Despicable Me 3,Uni.,264624300,2017,Steve Carell, Kristen Wiig, Trey Parker, Miranda Cosgrove,0,0
+97,98,The Amazing Spider-Man,Sony,262030663,2012,Andrew Garfield, Emma Stone, Rhys Ifans, Denis Leary,0,0
+98,99,Harry Potter and the Chamber of Secrets,WB,261988482,2002,Daniel Radcliffe, Rupert Grint, Emma Watson, Richard Griffiths,0,0
+99,100,The Incredibles,BV,261441092,2004,Craig T. Nelson, Holly Hunter, Samuel L. Jackson, Jason Lee,0,0
+100,101,How the Grinch Stole Christmas,Uni.,260044825,2000,Jim Carrey, Taylor Momsen, Kelley, Jeffrey Tambor,0,0
+101,102,Jaws,Uni.,260000000,1975,Roy Scheider, Robert Shaw, Richard Dreyfuss, Lorraine Gary,0,0
+102,103,Captain America: The Winter Soldier,BV,259766572,2014,Chris Evans, Samuel L. Jackson, Scarlett Johansson, Robert Redford,0,0
+103,104,The Hobbit: The Desolation of Smaug,WB (NL),258366855,2013,Ian McKellen, Martin Freeman, Richard Armitage, Ken Stott,0,0
+104,105,The LEGO Movie,WB,257760692,2014,Will Arnett, Elizabeth Banks, Craig Berry, Alison Brie,0,0
+105,106,Star Trek,Par.,257730019,2009,Chris Pine, Zachary Quinto, Leonard Nimoy, Eric Bana,0,0
+106,107,I Am Legend,WB,256393010,2007,Will Smith, Alice Braga, Charlie Tahan, Salli Richardson-Whitfield,0,1
+107,108,The Blind Side,WB,255959475,2009,Sandra Bullock, Tim McGraw, Quinton Aaron, Jae Head,1,0
+108,109,The Hobbit: The Battle of the Five Armies,WB (NL),255119788,2014,Ian McKellen, Martin Freeman, Richard Armitage, Ken Stott,0,0
+109,110,The Hangover Part II,WB,254464305,2011,Bradley Cooper, Ed Helms, Zach Galifianakis, Justin Bartha,0,0
+110,111,Despicable Me,Uni.,251513985,2010,Steve Carell, Jason Segel, Russell Brand, Julie Andrews,0,0
+111,112,Batman,WB,251188924,1989,Michael Keaton, Jack Nicholson, Kim Basinger, Robert Wuhl,0,0
+112,113,Night at the Museum,Fox,250863268,2006,Ben Stiller, Carla Gugino, Dick Van Dyke, Mickey Rooney,0,0
+113,114,Men in Black,Sony,250690539,1997,Tommy Lee Jones, Will Smith, Linda Fiorentino, Vincent D'Onofrio,0,0
+114,115,Harry Potter and the Prisoner of Azkaban,WB,249541069,2004,Daniel Radcliffe, Richard Griffiths, Pam Ferris, Fiona Shaw,0,0
+115,116,Moana,BV,248757044,2016,Auli'i Cravalho, Dwayne Johnson, Rachel House, Temuera Morrison,1,0
+116,117,Raiders of the Lost Ark,Par.,248159971,1981,Harrison Ford, Karen Allen, Paul Freeman, Ronald Lacey,0,0
+117,118,Toy Story 2,BV,245852179,1999,Tom Hanks, Tim Allen, Joan Cusack, Kelsey Grammer,0,0
+118,119,Transformers: Age of Extinction,Par.,245439076,2014,Mark Wahlberg, Stanley Tucci, Kelsey Grammer, Nicola Peltz,0,0
+119,120,Cars,BV,244082982,2006,Owen Wilson, Paul Newman, Bonnie Hunt, Larry the Cable Guy,0,0
+120,121,Bruce Almighty,Uni.,242829261,2003,Jim Carrey, Morgan Freeman, Jennifer Aniston, Philip Baker Hall,0,0
+121,122,Ghostbusters,Col.,242212467,1984,Bill Murray, Dan Aykroyd, Sigourney Weaver, Harold Ramis,0,0
+122,123,Twister,WB,241721524,1996,Helen Hunt, Bill Paxton, Cary Elwes, Jami Gertz,1,0
+123,124,My Big Fat Greek Wedding,IFC,241438208,2002,Nia Vardalos, Michael Constantine, Christina Eleusiniotis, Kaylee Vieira,1,0
+124,125,Maleficent,BV,241410378,2014,Angelina Jolie, Elle Fanning, Sharlto Copley, Lesley Manville,1,0
+125,126,Pirates of the Caribbean: On Stranger Tides,BV,241071802,2011,Johnny Depp, Pen_lope Cruz, Geoffrey Rush, Ian McShane,0,0
+126,127,Shrek Forever After,P/DW,238736787,2010,Mike Myers, Eddie Murphy, Cameron Diaz, Antonio Banderas,0,0
+127,128,Fast & Furious 6,Uni.,238679850,2013,Vin Diesel, Paul Walker, Dwayne Johnson, Jordana Brewster,0,1
+128,129,Brave,BV,237283207,2012,Kelly Macdonald, Billy Connolly, Emma Thompson, Julie Walters,1,0
+129,130,Oz The Great and Powerful,BV,234911825,2013,James Franco, Mila Kunis, Rachel Weisz, Michelle Williams,0,0
+130,131,Beverly Hills Cop,Par.,234760478,1984,Eddie Murphy, Judge Reinhold, John Ashton, Lisa Eilbacher,0,1
+131,132,X-Men: The Last Stand,Fox,234362462,2006,Hugh Jackman, Halle Berry, Ian McKellen, Patrick Stewart,0,0
+132,133,War of the Worlds,Par.,234280354,2005,Tom Cruise, Dakota Fanning, Miranda Otto, Justin Chatwin,0,0
+133,134,Fantastic Beasts and Where To Find Them,WB,234037575,2016,Eddie Redmayne, Sam Redford, Scott Goldman, Tim Bentinck,0,0
+134,135,X-Men: Days of Future Past,Fox,233921534,2014,Hugh Jackman, James McAvoy, Michael Fassbender, Jennifer Lawrence,0,0
+135,136,Cast Away,Fox,233632142,2000,Tom Hanks, Paul Sanchez, Lari White, Leonid Citer,0,0
+136,137,The Exorcist,WB,232906145,1973,Ellen Burstyn, Max von Sydow, Lee J. Cobb, Kitty Winn,1,0
+137,138,Doctor Strange,BV,232641920,2016,Benedict Cumberbatch, Chiwetel Ejiofor, Rachel McAdams, Benedict Wong,0,0
+138,139,The Lost World: Jurassic Park,Uni.,229086679,1997,Jeff Goldblum, Julianne Moore, Pete Postlethwaite, Arliss Howard,0,0
+139,140,Justice League,WB,229024295,2017,Ben Affleck, Henry Cavill, Amy Adams, Gal Gadot,0,0
+140,141,Star Trek: Into Darkness,Par.,228778661,2013,Chris Pine, Zachary Quinto, Zoe Saldana, Karl Urban,0,0
+141,142,The Martian,Fox,228433663,2015,Matt Damon, Jessica Chastain, Kristen Wiig, Jeff Daniels,0,0
+142,143,Signs,BV,227966634,2002,Mel Gibson, Joaquin Phoenix, Rory Culkin, Abigail Breslin,0,0
+143,144,Hancock,Sony,227946274,2008,Will Smith, Charlize Theron, Jason Bateman, Jae Head,0,1
+144,145,The Bourne Ultimatum,Uni.,227471070,2007,Matt Damon, Julia Stiles, David Strathairn, Scott Glenn,0,0
+145,146,Logan,Fox,226277068,2017,Hugh Jackman, Patrick Stewart, Dafne Keen, Boyd Holbrook,0,0
+146,147,Rush Hour 2,NL,226164286,2001,Jackie Chan, Chris Tucker, John Lone, Ziyi Zhang,0,1
+147,148,The Fate of the Furious,Uni.,226008385,2017,Vin Diesel, Jason Statham, Dwayne Johnson, Michelle Rodriguez,0,1
+148,149,WALL-E,BV,223808164,2008,Ben Burtt, Elissa Knight, Jeff Garlin, Fred Willard,0,0
+149,150,Big Hero 6,BV,222527828,2014,Scott Adsit, Ryan Potter, Daniel Henney, T.J. Miller,0,0
+150,151,National Treasure: Book of Secrets,BV,219964115,2007,Nicolas Cage, Justin Bartha, Diane Kruger, Jon Voight,0,0
+151,152,Alvin and the Chipmunks: The Squeakquel,Fox,219614612,2009,Zachary Levi, David Cross, Jason Lee, Justin Long,0,0
+152,153,Mrs. Doubtfire,Fox,219195243,1993,Robin Williams, Sally Field, Pierce Brosnan, Harvey Fierstein,0,0
+153,154,Beauty and the Beast,BV,218967620,1991,Robby Benson, Jesse Corti, Rex Everhart, Angela Lansbury,0,0
+154,155,Ted,Uni.,218815487,2012,Mark Wahlberg, Mila Kunis, Seth MacFarlane, Joel McHale,0,0
+155,156,King Kong,Uni.,218080025,2005,Naomi Watts, Jack Black, Adrien Brody, Thomas Kretschmann,1,0
+156,157,Ghost,Par.,217631306,1990,Patrick Swayze, Demi Moore, Whoopi Goldberg, Tony Goldwyn,0,0
+157,158,How to Train Your Dragon,P/DW,217581231,2010,Jay Baruchel, Gerard Butler, Craig Ferguson, America Ferrera,0,0
+158,159,The Da Vinci Code,Sony,217536138,2006,Tom Hanks, Audrey Tautou, Ian McKellen, Jean Reno,0,0
+159,160,Aladdin,BV,217350219,1992,Scott Weinger, Robin Williams, Linda Larkin, Jonathan Freeman,0,0
+160,161,Alvin and the Chipmunks,Fox,217326974,2007,Jason Lee, David Cross, Cameron Richardson, Jane Lynch,0,0
+161,162,Saving Private Ryan,DW,216540909,1998,Tom Hanks, Tom Sizemore, Edward Burns, Barry Pepper,0,0
+162,163,Madagascar 3: Europe's Most Wanted,P/DW,216391482,2012,Ben Stiller, Chris Rock, David Schwimmer, Jada Pinkett Smith,0,0
+163,164,Kung Fu Panda,P/DW,215434591,2008,Jack Black, Dustin Hoffman, Angelina Jolie, Ian McShane,0,0
+164,165,Mission: Impossible II,Par.,215409889,2000,Tom Cruise, Dougray Scott, Thandie Newton, Ving Rhames,0,0
+165,166,X-Men 2,Fox,214949694,2003,Patrick Stewart, Hugh Jackman, Ian McKellen, Halle Berry,0,0
+166,167,The Lorax,Uni.,214030500,2012,Danny DeVito, Ed Helms, Zac Efron, Taylor Swift,0,0
+167,168,Austin Powers in Goldmember,NL,213307889,2002,Mike Myers, Beyonc_, Seth Green, Michael York,0,0
+168,169,300,WB,210614939,2007,Gerard Butler, Lena Headey, Dominic West, David Wenham,0,0
+169,170,Back to the Future,Uni.,210609762,1985,Michael J. Fox, Christopher Lloyd, Lea Thompson, Crispin Glover,0,0
+170,171,Fast Five,Uni.,209837675,2011,Vin Diesel, Paul Walker, Jordana Brewster, Tyrese Gibson,0,1
+171,172,Coco,BV,209454871,2017,Anthony Gonzalez, Gael García Bernal, Benjamin Bratt, Alanna Ubach,0,1
+172,173,Mission: Impossible - Ghost Protocol,Par.,209397903,2011,Tom Cruise, Paula Patton, Simon Pegg, Jeremy Renner,0,0
+173,174,Wedding Crashers,NL,209255921,2005,Owen Wilson, Vince Vaughn, Christopher Walken, Rachel McAdams,0,0
+174,175,Sherlock Holmes,WB,209028679,2009,Robert Downey Jr., Jude Law, Rachel McAdams, Mark Strong,0,0
+175,176,Dawn of the Planet of the Apes,Fox,208545589,2014,Andy Serkis, Jason Clarke, Gary Oldman, Keri Russell,0,0
+176,177,Batman Begins,WB,206852432,2005,Christian Bale, Michael Caine, Liam Neeson, Katie Holmes,0,0
+177,178,Charlie and the Chocolate Factory,WB,206459076,2005,Johnny Depp, Freddie Highmore, David Kelly, Helena Bonham Carter,0,0
+178,179,Ratatouille,BV,206445654,2007,Patton Oswalt, Ian Holm, Lou Romano, Brian Dennehy,0,0
+179,180,Thor: The Dark World,BV,206362140,2013,Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins,0,0
+180,181,Austin Powers: The Spy Who Shagged Me,NL,206040086,1999,Mike Myers, Heather Graham, Michael York, Robert Wagner,0,0
+181,182,Terminator 2: Judgment Day,TriS,205881154,1991,Bobby Baker, Michael Bartnett, Jenny Larson, Mike Maclaggan,0,0
+182,183,The Amazing Spider-Man 2,Sony,202853933,2014,Andrew Garfield, Emma Stone, Jamie Foxx, Dane DeHaan,0,0
+183,184,World War Z,Par.,202359711,2013,Brad Pitt, Mireille Enos, Daniella Kertesz, James Badge Dale,0,0
+184,185,The Mummy Returns,Uni.,202019785,2001,Brendan Fraser, Rachel Weisz, John Hannah, Arnold Vosloo,0,0
+185,186,Armageddon,BV,201578182,1998,Bruce Willis, Billy Bob Thornton, Ben Affleck, Liv Tyler,0,0
+186,187,Cinderella&y=2015,BV,201151353,2015,Cate Blanchett, Lily James, Richard Madden, Helena Bonham Carter,1,0
+187,188,Tangled,BV,200821936,2010,Mandy Moore, Zachary Levi, Donna Murphy, Ron Perlman,1,0
+188,189,Godzilla&y=2014,WB,200676069,2014,Aaron Taylor-Johnson, CJ Adams, Ken Watanabe, Bryan Cranston,0,0
+189,190,Superman Returns,WB,200081192,2006,Brandon Routh, Kate Bosworth, Kevin Spacey, James Marsden,0,0
+190,191,Spectre,Sony,200074609,2015,Daniel Craig, Christoph Waltz, L_a Seydoux, Ralph Fiennes,0,0
+191,192,Gone with the Wind,MGM,198676459,1939,Thomas Mitchell, Barbara O'Neil, Vivien Leigh, Evelyn Keyes,0,0
+192,193,Pearl Harbor,BV,198542554,2001,Ben Affleck, Josh Hartnett, Kate Beckinsale, William Lee Scott,0,0
+193,194,Monsters vs. Aliens,P/DW,198351526,2009,Reese Witherspoon, Seth Rogen, Hugh Laurie, Will Arnett,1,0
+194,195,Happy Feet,WB,198000317,2006,Carlos Alazraqui, Lombardo Boyar, Jeffrey Garcia, Johnny A. Sanchez,0,0
+195,196,Indiana Jones and the Last Crusade,Par.,197171806,1989,Harrison Ford, Sean Connery, Denholm Elliott, Alison Doody,0,0
+196,197,Ice Age: Dawn of the Dinosaurs,Fox,196573705,2009,Eunice Cho, Karen Disher, Harrison Fahn, Maile Flanagan,0,0
+197,198,Ice Age: The Meltdown,Fox,195330621,2006,Ray Romano, John Leguizamo, Denis Leary, Seann William Scott,0,0
+198,199,Mission: Impossible - Rogue Nation,Par.,195042377,2015,Tom Cruise, Jeremy Renner, Simon Pegg, Rebecca Ferguson,0,0
+199,200,Madagascar,DW,193595521,2005,Ben Stiller, Chris Rock, David Schwimmer, Jada Pinkett Smith,0,0
+200,201,Twilight,Sum.,192769854,2008,Kristen Stewart, Sarah Clarke, Matt Bushell, Billy Burke,1,0
+201,202,Toy Story,BV,191796233,1995,Tom Hanks, Tim Allen, Don Rickles, Jim Varney,0,0
+202,203,22 Jump Street,Sony,191719337,2014,Jonah Hill, Channing Tatum, Peter Stormare, Wyatt Russell,0,0
+203,204,Cars 2,BV,191452396,2011,Larry the Cable Guy, Owen Wilson, Michael Caine, Emily Mortimer,0,0
+204,205,Teenage Mutant Ninja Turtles&y=2014,Par.,191204754,2014,Megan Fox, Will Arnett, William Fichtner, Alan Ritchson,1,0
+205,206,Men in Black II,Sony,190418803,2002,Tommy Lee Jones, Will Smith, Rip Torn, Lara Flynn Boyle,0,0
+206,207,Wreck-It Ralph,BV,189422889,2012,John C. Reilly, Sarah Silverman, Jack McBrayer, Jane Lynch,0,0
+207,208,Grease,Par.,188755690,1978,John Travolta, Olivia Newton-John, Stockard Channing, Jeff Conaway,0,0
+208,209,Dunkirk,WB,188373161,2017,Fionn Whitehead, Damien Bonnard, Aneurin Barnard, Lee Armstrong,0,0
+209,210,Interstellar,Par.,188020017,2014,Ellen Burstyn, Matthew McConaughey, Mackenzie Foy, John Lithgow,0,0
+210,211,Gladiator,DW,187705427,2000,Russell Crowe, Joaquin Phoenix, Connie Nielsen, Oliver Reed,0,0
+211,212,The Croods,Fox,187168425,2013,Nicolas Cage, Emma Stone, Ryan Reynolds, Catherine Keener,0,0
+212,213,Sherlock Holmes: A Game of Shadows,WB,186848418,2011,Robert Downey Jr., Jude Law, Noomi Rapace, Rachel McAdams,0,0
+213,214,The Day After Tomorrow,Fox,186740799,2004,Dennis Quaid, Jake Gyllenhaal, Emmy Rossum, Dash Mihok,0,0
+214,215,The Polar Express,WB,186493472,2004,Tom Hanks, Leslie Zemeckis, Eddie Deezen, Nona Gaye,0,0
+215,216,Mr. & Mrs. Smith,Fox,186336279,2005,Brad Pitt, Angelina Jolie, Vince Vaughn, Adam Brody,0,0
+216,217,Snow White and the Seven Dwarfs,Dis.,184925486,1937,Roy Atwell, Stuart Buchanan, Adriana Caselotti, Eddie Collins,0,0
+217,218,Pitch Perfect 2,Uni.,184296230,2015,Anna Kendrick, Rebel Wilson, Hailee Steinfeld, Brittany Snow,1,0
+218,219,Dances with Wolves,Orion,184208848,1990,Kevin Costner, Mary McDonnell, Graham Greene, Rodney A. Grant,0,0
+219,220,Batman Forever,WB,184031112,1995,Val Kilmer, Tommy Lee Jones, Jim Carrey, Nicole Kidman,0,0
+220,221,The Fugitive,WB,183875760,1993,Harrison Ford, Tommy Lee Jones, Sela Ward, Julianne Moore,0,0
+221,222,The Revenant,Fox,183637894,2015,Leonardo DiCaprio, Tom Hardy, Domhnall Gleeson, Will Poulter,0,0
+222,223,Ocean's Eleven,WB,183417150,2001,George Clooney, Cecelia Ann Birt, Paul L. Nolan, Carol Florence,0,0
+223,224,The Simpsons Movie,Fox,183135014,2007,Dan Castellaneta, Julie Kavner, Nancy Cartwright, Yeardley Smith,0,0
+224,225,What Women Want,Par.,182811707,2000,Mel Gibson, Helen Hunt, Marisa Tomei, Alan Alda,0,0
+225,226,The Perfect Storm,WB,182618434,2000,George Clooney, Mark Wahlberg, John C. Reilly, Diane Lane,0,0
+226,227,Lincoln,BV,182207973,2012,Daniel Day-Lewis, Sally Field, David Strathairn, Joseph Gordon-Levitt,0,0
+227,228,Liar Liar,Uni.,181410615,1997,Jim Carrey, Maura Tierney, Justin Cooper, Cary Elwes,0,0
+228,229,Jurassic Park III,Uni.,181171875,2001,Sam Neill, William H. Macy, T_a Leoni, Alessandro Nivola,0,0
+229,230,Thor,Par.,181030624,2011,Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins,0,0
+230,231,Mission: Impossible,Par.,180981856,1996,Tom Cruise, Jon Voight, Emmanuelle B_art, Henry Czerny,0,0
+231,232,Ant-Man,BV,180202163,2015,Paul Rudd, Michael Douglas, Evangeline Lilly, Corey Stoll,0,0
+232,233,Planet of the Apes&y=2001,Fox,180011740,2001,Mark Wahlberg, Tim Roth, Helena Bonham Carter, Michael Clarke Duncan,0,0
+233,234,Madagascar: Escape 2 Africa,P/DW,180010950,2008,Ben Stiller, Chris Rock, David Schwimmer, Jada Pinkett Smith,0,0
+234,235,X-Men Origins: Wolverine,Fox,179883157,2009,Hugh Jackman, Liev Schreiber, Danny Huston, Will.i.am,0,0
+235,236,Indiana Jones and the Temple of Doom,Par.,179870271,1984,Harrison Ford, Kate Capshaw, Jonathan Ke Quan, Amrish Puri,0,0
+236,237,Top Gun,Par.,179800601,1986,Tom Cruise, Kelly McGillis, Val Kilmer, Anthony Edwards,0,0
+237,238,Hitch,Sony,179495555,2005,Will Smith, Eva Mendes, Kevin James, Amber Valletta,0,1
+238,239,MIB 3,Sony,179020854,2012,Will Smith, Walter F. Parkes, Barry Sonnenfeld, Nicole Scherzinger,0,1
+239,240,Pretty Woman,BV,178406268,1990,Richard Gere, Julia Roberts, Ralph Bellamy, Jason Alexander,0,0
+240,241,Home&y=2015,Fox,177397510,2015,Jim Parsons, Rihanna, Steve Martin, Jennifer Lopez,0,0
+241,242,Night at the Museum: Battle of the Smithsonian,Fox,177243721,2009,Ben Stiller, Amy Adams, Owen Wilson, Hank Azaria,0,0
+242,243,Tootsie,Col.,177200000,1982,Dustin Hoffman, Jessica Lange, Teri Garr, Dabney Coleman,0,0
+243,244,How to Train Your Dragon 2,Fox,177002924,2014,Jay Baruchel, Cate Blanchett, Gerard Butler, Craig Ferguson,0,0
+244,245,Rise of the Planet of the Apes,Fox,176760185,2011,Andy Serkis, Karin Konoval, Terry Notary, Richard Ridings,0,0
+245,246,Captain America: The First Avenger,Par.,176654505,2011,Chris Evans, Hayley Atwell, Sebastian Stan, Tommy Lee Jones,0,0
+246,247,The Karate Kid,Sony,176591618,2010,Ralph Macchio, Pat Morita, Elisabeth Shue, Martin Kove,0,0
+247,248,There's Something About Mary,Fox,176484651,1998,Cameron Diaz, Matt Dillon, Ben Stiller, Lee Evans,1,0
+248,249,Ice Age,Fox,176387405,2002,Ray Romano, John Leguizamo, Denis Leary, Goran Visnjic,0,0
+249,250,The Bourne Supremacy,Uni.,176241941,2004,Matt Damon, Franka Potente, Brian Cox, Julia Stiles,0,0
+250,251,Get Out,Uni.,176040665,2017,Daniel Kaluuya, Allison Williams, Catherine Keener, Bradley Whitford,0,1
+251,252,The LEGO Batman Movie,WB,175750384,2017,Will Arnett, Michael Cera, Rosario Dawson, Ralph Fiennes,0,0
+252,253,The Boss Baby,Fox,175003033,2017,Alec Baldwin, Steve Buscemi, Jimmy Kimmel, Lisa Kudrow,0,0
+253,254,Crocodile Dundee,Par.,174803506,1986,Paul Hogan, Linda Kozlowski, John Meillon, David Gulpilil,0,0
+254,255,Apollo 13,Uni.,173837933,1995,Tom Hanks, Bill Paxton, Kevin Bacon, Gary Sinise,0,0
+255,256,Home Alone 2: Lost in New York,Fox,173585516,1992,Macaulay Culkin, Joe Pesci, Daniel Stern, Catherine O'Hara,0,0
+256,257,Elf,NL,173398518,2003,Will Ferrell, James Caan, Bob Newhart, Edward Asner,0,0
+257,258,National Treasure,BV,173008894,2004,Nicolas Cage, Diane Kruger, Justin Bartha, Sean Bean,0,0
+258,259,Air Force One,Sony,172956409,1997,Harrison Ford, Gary Oldman, Glenn Close, Wendy Crewson,0,0
+259,260,Rain Man,MGM,172825435,1988,Dustin Hoffman, Tom Cruise, Valeria Golino, Gerald R. Molen,0,0
+260,261,Pirates of the Caribbean: Dead Men Tell No Tales,BV,172558876,2017,Johnny Depp, Javier Bardem, Geoffrey Rush, Brenton Thwaites,0,0
+261,262,Tron Legacy,BV,172062763,2010,Joseph Kosinski ,,,,0,0
+262,263,The Greatest Showman,Fox,171629190,2017,Hugh Jackman, Michelle Williams, Zac Efron, Zendaya,0,0
+263,264,The Matrix,WB,171479930,1999,Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving,0,0
+264,265,True Grit,Par.,171243005,2010,Jeff Bridges, Hailee Steinfeld, Matt Damon, Josh Brolin,0,0
+265,266,Tarzan,BV,171091819,1999,Brian Blessed, Glenn Close, Minnie Driver, Tony Goldwyn,0,0
+266,267,A Beautiful Mind,Uni.,170742341,2001,Russell Crowe, Ed Harris, Jennifer Connelly, Christopher Plummer,0,0
+267,268,Chicago,Mira.,170687518,2002,Taye Diggs, Cliff Saunders, Catherine Zeta-Jones, Ren_e Zellweger,0,0
+268,269,The Help,BV,169708112,2011,Emma Stone, Viola Davis, Bryce Dallas Howard, Octavia Spencer,1,0
+269,270,Hotel Transylvania 2,Sony,169700110,2015,Adam Sandler, Andy Samberg, Selena Gomez, Kevin James,0,0
+269,270,Hotel Transylvania 2,Sony,169700110,2015,Adam Sandler, Andy Samberg, Selena Gomez, Kevin James,0,0
+270,271,Hidden Figures,Fox,169607287,2016,Taraji P. Henson, Octavia Spencer, Janelle Mone, Kevin Costner,1,1
+271,272,Bridesmaids,Uni.,169106725,2011,Kristen Wiig, Terry Crews, Maya Rudolph, Tom Yi,1,0
+272,273,Quantum of Solace,Sony,168368427,2008,Daniel Craig, Olga Kurylenko, Mathieu Amalric, Judi Dench,0,0
+273,274,Wild Hogs,BV,168273550,2007,Tim Allen, John Travolta, Martin Lawrence, William H. Macy,0,0
+274,275,Kong: Skull Island,WB,168052812,2017,Tom Hiddleston, Samuel L. Jackson, Brie Larson, John C. Reilly,0,0
+275,276,3 Men and a Baby,BV,167780960,1987,Tom Selleck, Steve Guttenberg, Ted Danson, Nancy Travis,0,0
