@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <title>try</title>
-    <script src="http://d3js.org/d3.v4.min.js"></script>
+    <script src="./d3.js"></script>
 
     <style>
       .orbit {
@@ -36,10 +36,12 @@
         .attr("cy", h/2).attr("class", "sun");
 
       var container = svg.append("g")
+          .attr("class","spinner")
         .attr("transform", "translate(" + w/2 + "," + h/2 + ")");
       var parseTime = d3.timeParse("%d-%b-%Y");
       var formatYear=d3.timeFormat("%Y");
       var inter=d3.scaleTime().domain([parseTime("01-Jan-1937"),parseTime("12-Dec-2020")]).range([100, 400]);
+      var speedScale=d3.scaleLinear().domain([120908074,1000000000]).range([5,1]);
       function parseline(line){
         return {
             time:parseTime(line.year),
@@ -48,42 +50,62 @@
             if_black:+line.non_white_lead,
             radiusOrbit:inter(parseTime(line.year)),
             radiusDot:5,
-            speed:10*Math.random(),
+            speed:speedScale(line.box_office),
             phi0: Math.floor(360*Math.random())
         }
       }
-      d3.csv("./movie_actor.csv",parseline,function(data){
-          var planets=[];
-          data.forEach(function(d){
-              planets.push({R:d.radiusOrbit,r:d.radiusDot,speed:d.speed,phi0:d.phi0});
+      d3.csv("./movie_actor.csv",parseline,function(data) {
+          var planets = [];
+          data.forEach(function (d) {
+              planets.push({
+                  R: d.radiusOrbit,
+                  r: d.radiusDot,
+                  speed: d.speed,
+                  phi0: d.phi0,
+                  if_female: d.if_female,
+                  if_black: d.if_black
+              });
           });
           container.selectAll("g.planet").data(planets).enter().append("g")
-        .attr("class", "planet").each(function(d, i) {
-          d3.select(this).append("circle").attr("class", "orbit")
-            .attr("r", d.R);
-//              .style("stroke","none");
-          d3.select(this).append("circle").attr("r", d.r).attr("cx",d.R)
-            .attr("cy", 0).attr("class", "planet");
-        });
+              .attr("class", "planet").each(function (d, i) {
+              d3.select(this).append("circle").attr("class", "orbit")
+                  .attr("r", d.R)
+                  .style("stroke", "none");
 
-      d3.timer(function() {
-        var delta = (Date.now() - t0);
-//        console.log(delta);
-        svg.selectAll(".planet").attr("transform", function(d) {
-          return "rotate(" + d.phi0 + delta * d.speed/200 + ")";
-        });
+              if (d.if_female === 1 || d.if_black === 1) {
+                  d3.select(this).append("circle").attr("r", d.r).attr("cx", d.R)
+                      .attr("cy", 0).attr("class", "planet minority").style("fill", "#ff8004");
+              }
+              else {
+                  d3.select(this).append("circle").attr("r", d.r).attr("cx", d.R)
+                      .attr("cy", 0).attr("class", "planet");
+              }
+          });
+          d3.selectAll("g.planet")
+              .on("mouseover",function(d){
+                  d.speed=0.0001;console.log(d.speed);
+              })
+              .on("mouseout",function(d){
+                  d.speed=d.speed*10000;console.log(d.speed);
+              });
+          d3.timer(function () {
+              var delta = (Date.now() - t0);
+
+              svg.selectAll(".planet")
+                  .attr("transform", function (d) {
+                      return "rotate(" + d.phi0 + delta * d.speed / 200 + ")";
+                  });
+          });
       });
-//          return planets;
-      });
-//      var planets = [
-//        { R: 300, r:  5, speed: 10*Math.random(), phi0: Math.floor(360*Math.random())},
-//        { R: 150, r: 10, speed: 10*Math.random(), phi0: Math.floor(360*Math.random())},
-//        { R: 200, r: 8, speed: 10*Math.random(), phi0: Math.floor(360*Math.random())},
-//        { R: 250, r: 9, speed: 10*Math.random(), phi0: Math.floor(360*Math.random())},
-//        { R: 100, r: 4, speed: 10*Math.random(), phi0: Math.floor(360*Math.random())},
-//        { R: 180, r: 6, speed: 10*Math.random(), phi0: Math.floor(360*Math.random())},
-//        { R: 270, r: 7, speed: 10*Math.random(), phi0: Math.floor(360*Math.random())}
-//      ];
+
+//      d3.timer(function() {
+//        var delta = (Date.now() - t0);
+////        console.log(delta);
+//        svg.selectAll(".planet").attr("transform", function(d) {
+//          return "rotate(" + d.phi0 + delta * d.speed/200 + ")";
+//            });
+//        });
+//      });
 
 
     </script>
