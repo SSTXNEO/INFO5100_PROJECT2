@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<style>
+		/* default / demo page */
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			min-height: 1280px;
+			font-weight: 300;
+			color: #2a2a2a;
+		}
+
+		p,
+		h1,
+		h2,
+		h3,
+		h4,
+		a {
+			margin: 0;
+			font-weight: 300;
+		}
+
+		a,
+		a:visited,
+		a:hover {
+			color: #f30;
+			text-decoration: none;
+			border-bottom: 1px solid currentColor;
+		}
+
+		/* scrollama */
+
+		#scroll {
+			position: relative;
+		}
+
+		.scroll__graphic {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: auto;
+			background-color: #fff;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+
+		.scroll__graphic.is-fixed {
+			position: fixed;
+		}
+
+		.scroll__graphic.is-bottom {
+			bottom: 0;
+			top: auto;
+		}
+
+		.chart {
+			position: absolute;
+			right: 1rem;
+			top: 50%;
+			-moz-transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			background-color: #000;
+		}
+
+		.chart p {
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 8rem;
+			font-weight: 900;
+			color: #666;
+		}
+
+		.scroll__text {
+			position: relative;
+			padding-right: 1rem;
+			max-width: 30rem;
+			width: 33%;
+		}
+
+		.step {
+			background-color: black;
+		}
+
+		.step.is-active {
+			background-color: black;
+		}
+
+		.step p {
+			padding-top: 250px;
+			padding-left: 50px;
+			text-align: center;
+			font-size: 1.5rem;
+			font-family: Courier;
+			color: #fff;
+		}
+		
+		.orbit {
+	       stroke : #000000;
+	       fill : none;
+	       opacity: 0.7;
+      	}
+	    
+	    .planet {
+	       stroke : #000000;
+	       fill : #FFFFFF;
+	       opacity: 0.7;
+     	}
+        
+        .sun {
+	        fill : #fff;
+	        opacity: 0.7;
+	    }
+	</style>
+
+</head>
+
+<body>
+	<section id='scroll'>
+		<div class='scroll__graphic'>
+			<div class='chart'>
+				<p></p>
+			</div>
+		</div>
+		<div class='scroll__text'>
+			<div class='step' data-step='1'>
+				<p>"The population is becoming more diverse over time and the question is: What is Hollywood doing relative to that population increasing in diversity?"</p>
+			</div>
+			<div class='step' data-step='2'>
+				<p>We explored all time domestic box office results and selected 500 movies, with the oldest movie being closest to the center and vice versa.</p>
+			</div>
+			<div class='step' data-step='3'>
+				<p>STEP 3</p>
+			</div>
+			<div class='step' data-step='4'>
+				<p>STEP 4</p>
+			</div>
+		</div>
+	</section>
+
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+	<script src='https://unpkg.com/intersection-observer'></script>
+	<script src='https://unpkg.com/scrollama'></script>
+	<script>
+		// using d3 for convenience
+		var container = d3.select('#scroll');
+		var graphic = container.select('.scroll__graphic');
+		var chart = graphic.select('.chart');
+		var text = container.select('.scroll__text');
+		var step = text.selectAll('.step');
+
+		// initialize the scrollama
+		var scroller = scrollama();
+
+		// generic window resize listener event
+		function handleResize() {
+			// 1. update height of step elements
+			var stepHeight = Math.floor(window.innerHeight);
+			step.style('height', stepHeight + 'px');
+
+			// 2. update width/height of graphic element
+			var bodyWidth = d3.select('body').node().offsetWidth;
+
+			graphic
+				.style('width', bodyWidth + 'px')
+				.style('height', window.innerHeight + 'px');
+
+			var textWidth = text.node().offsetWidth;
+			var chartWidth = graphic.node().offsetWidth - textWidth;
+
+			chart
+			.style('width', chartWidth + 'px')
+			.style('height', Math.floor(window.innerHeight) + 'px');
+
+
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+
+		// scrollama event handlers
+		function handleStepEnter(response) {
+			// response = { element, direction, index }
+
+			// add color to current step only
+			step.classed('is-active', function (d, i) {
+				return i === response.index;
+			})
+
+			// update graphic based on step
+			chart.selectAll("g.planet")
+		        .each(function (d, i) {
+
+		            if (d.if_female === 1 || d.if_black === 1) {
+		                
+		                d3.select(this)
+		                .append("circle")
+		                .attr("r", d.r)
+		                .attr("cx", d.R)
+		                .attr("cy", 0)
+		                .attr("class", "planet minority")
+		                .style("fill", "#ff8004");
+
+		            }
+		        });
+		}
+
+		function handleContainerEnter(response) {
+			// response = { direction }
+
+			// sticky the graphic (old school)
+			graphic.classed('is-fixed', true);
+			graphic.classed('is-bottom', false);
+		}
+
+		function handleContainerExit(response) {
+			// response = { direction }
+
+			// un-sticky the graphic, and pin to top/bottom of container
+			graphic.classed('is-fixed', false);
+			graphic.classed('is-bottom', response.direction === 'down');
+		}
+
+		function init() {
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+
+			// 2. setup the scroller passing options
+			// this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller.setup({
+				container: '#scroll',
+				graphic: '.scroll__graphic',
+				text: '.scroll__text',
+				step: '.scroll__text .step',
+			})
+				.onStepEnter(handleStepEnter)
+				.onContainerEnter(handleContainerEnter)
+				.onContainerExit(handleContainerExit);
+
+			// setup resize event
+			window.addEventListener('resize', handleResize);
+
+			var w = 800, h = 500;
+		    var t0 = Date.now();
+		    var svg = d3.select(".chart")
+		    .insert("svg")
+		    .attr("width", w)
+		    .attr("height", h)
+		    .attr("transform","translate(100,100)");
+
+		    svg.append("circle")
+		    .attr("r", 20)
+		    .attr("cx", w/2)
+		    .attr("cy", h/2)
+		    .attr("class", "sun");
+
+		    var container = svg.append("g")
+		    .attr("class","spinner")
+		    .attr("transform", "translate(" + w/2 + "," + h/2 + ")");
+		    
+		    var parseTime = d3.timeParse("%d-%b-%Y");
+		    var formatYear=d3.timeFormat("%Y");
+		    var inter=d3.scaleTime().domain([parseTime("01-Jan-1937"),parseTime("12-Dec-2020")]).range([100, 400]);
+		    var speedScale=d3.scaleLinear().domain([120908074,1000000000]).range([5,1]);
+		    
+		    function parseline(line){
+		        return {
+		            time:parseTime(line.year),
+		            box_office:+line.box_office,
+		            if_female:+line.female_lead,
+		            if_black:+line.non_white_lead,
+		            radiusOrbit:inter(parseTime(line.year)),
+		            radiusDot:5,
+		            speed:speedScale(line.box_office),
+		            phi0: Math.floor(360*Math.random())
+		        }
+		    }
+		    
+		    d3.csv("./movie_actor.csv",parseline,function(data) {
+		        
+		        var planets = [];
+		        data.forEach(function (d) {
+		            planets.push({
+		                R: d.radiusOrbit,
+		                r: d.radiusDot,
+		                speed: d.speed,
+		                phi0: d.phi0,
+		                if_female: d.if_female,
+		                if_black: d.if_black
+		            });
+		        });
+		        
+		        container.selectAll("g.planet")
+		        .data(planets)
+		        .enter()
+		        .append("g")
+		        .attr("class", "planet")
+		        .each(function (d, i) {
+		            
+		            d3.select(this)
+		            .append("circle")
+		            .attr("class", "orbit")
+		            .attr("r", d.R)
+		            .style("stroke", "none");
+
+		            // if (d.if_female === 1 || d.if_black === 1) {
+		                
+		            //     d3.select(this)
+		            //     .append("circle")
+		            //     .attr("r", d.r)
+		            //     .attr("cx", d.R)
+		            //     .attr("cy", 0)
+		            //     .attr("class", "planet minority")
+		            //     .style("fill", "#ff8004");
+
+		            // } else {
+		                
+		                d3.select(this)
+		                .append("circle")
+		                .attr("r", d.r)
+		                .attr("cx", d.R)
+		                .attr("cy", 0)
+		                .attr("class", "planet");
+		              // }
+		        });
+
+		        d3.timer(function () {
+		            
+		            var delta = (Date.now() - t0);
+
+		            svg.selectAll(".planet")
+		            .attr("transform", function (d) {
+		                return "rotate(" + d.phi0 + delta * d.speed / 500 + ")";
+		            });
+		          
+		        });
+		    
+		    });
+
+		}
+
+		// kick things off
+		init();
+
+	</script>
+</body>
+
+</html>
