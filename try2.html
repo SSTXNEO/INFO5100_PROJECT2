@@ -58,6 +58,7 @@
           var planets = [];
           data.forEach(function (d) {
               planets.push({
+                  time:d.time,
                   R: d.radiusOrbit,
                   r: d.radiusDot,
                   speed: d.speed,
@@ -66,7 +67,8 @@
                   if_black: d.if_black
               });
           });
-          console.log(planets);
+//          console.log(planets);
+//          var test=[];
           container.selectAll("g.planet").data(planets).enter().append("g")
               .attr("class", "planet").each(function (d, i) {
               d3.select(this).append("circle").attr("class", "orbit")
@@ -81,8 +83,9 @@
                   d3.select(this).append("circle").attr("r", d.r).attr("cx", d.R)
                       .attr("cy", 0).attr("class", "planet");
               }
+//              test.push(formatYear(d.time));
           });
-
+//          console.log(test);
             var j=0;
           d3.select("svg#canvas")
               .on("click",function(){

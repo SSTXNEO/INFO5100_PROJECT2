@@ -92,6 +92,7 @@
           }
 //          console.log(radiusOrbit);
         return {
+            title:line.title,
             time:parseTime(line.year),
             box_office:+line.box_office,
             if_female:+line.female_lead,
@@ -102,13 +103,20 @@
             phi0: Math.floor(360*Math.random())
         }
       }
+//      var div = d3.select("#planetarium").append("div")
+//    .attr("class", "tooltip")
+//    .style("opacity", 0);
+
       d3.csv("./movie_actor.csv",parseline,function(data) {
           var planets = [];
           data.forEach(function (d) {
               planets.push({
+                  title:d.title,
+                  time:d.time,
                   R: d.radiusOrbit,
                   r: d.radiusDot,
                   speed: d.speed,
+//                  tem:d.speed,
                   phi0: d.phi0,
                   if_female: d.if_female,
                   if_black: d.if_black
@@ -122,8 +130,29 @@
                   .style("stroke", "none");
 
               if (d.if_female === 1 || d.if_black === 1) {
-                  d3.select(this).append("circle").attr("r", d.r).attr("cx", d.R)
+                  var g=d3.select(this).append("g");
+                  g.append("circle").attr("r", d.r).attr("cx", d.R)
                       .attr("cy", 0).attr("class", "planet minority").style("fill", "#ff8004").style("stroke","none");
+                  g
+                      .append("text")
+                      .text(function(d){return d.title;})
+                      .attr("class","title")
+                      .attr("x",function(d){return 50})
+                      .attr("y",50)
+                      .style("opacity",0);
+                      g.on("mouseover",function(d){
+//                          console.log("hello");
+                          d3.select(".title")
+                              .transition()
+                              .duration(500)
+                              .style("opacity",1);
+                      })
+                      .on("mouseout",function(d){
+                          d3.select(".title")
+                              .transition()
+                              .duration(500)
+                              .style("opacity",0);
+                      });
               }
               else {
                   d3.select(this).append("circle").attr("r", d.r).attr("cx", d.R)
@@ -134,7 +163,7 @@
             var j=0;
           d3.select("svg#canvas")
               .on("click",function(){
-                  console.log(j);
+//                  console.log(j);
                   if(j%2===0){
                       j=j+1;
                       container.selectAll("g.planet").data(planets)
