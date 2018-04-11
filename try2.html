@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>try2</title>
+    <title>try</title>
     <script src="./d3.js"></script>
 
     <style>
@@ -30,9 +30,9 @@
       var w = 1440, h = 900;
       var t0 = Date.now();
       var svg = d3.select("#planetarium").insert("svg")
-        .attr("width", w).attr("height", h).attr("id","canvas").attr("transform","translate(100,100)");
+        .attr("width", w).attr("height", h).attr("id","canvas").attr("transform","translate(100,0)");
 
-      svg.append("circle").attr("r", 20).attr("cx", w/2)
+      svg.append("circle").attr("r", 10).attr("cx", w/2)
         .attr("cy", h/2).attr("class", "sun");
 
       var container = svg.append("g")
@@ -40,35 +40,89 @@
         .attr("transform", "translate(" + w/2 + "," + h/2 + ")");
       var parseTime = d3.timeParse("%d-%b-%Y");
       var formatYear=d3.timeFormat("%Y");
-      var inter=d3.scaleTime().domain([parseTime("01-Jan-1937"),parseTime("12-Dec-2020")]).range([100, 400]);
+      var inter1=d3.scaleTime().domain([parseTime("01-Jan-1937"),parseTime("31-Dec-1949")]).range([50, 80]);
+      var inter2=d3.scaleTime().domain([parseTime("01-Jan-1950"),parseTime("31-Dec-1959")]).range([100, 130]);
+      var inter3=d3.scaleTime().domain([parseTime("01-Jan-1960"),parseTime("31-Dec-1969")]).range([150, 180]);
+      var inter4=d3.scaleTime().domain([parseTime("01-Jan-1970"),parseTime("31-Dec-1979")]).range([200, 230]);
+      var inter5=d3.scaleTime().domain([parseTime("01-Jan-1980"),parseTime("31-Dec-1989")]).range([250, 280]);
+      var inter6=d3.scaleTime().domain([parseTime("01-Jan-1990"),parseTime("31-Dec-1999")]).range([300, 330]);
+      var inter7=d3.scaleTime().domain([parseTime("01-Jan-2000"),parseTime("31-Dec-2009")]).range([350, 380]);
+      var inter8=d3.scaleTime().domain([parseTime("01-Jan-2010"),parseTime("01-May-2018")]).range([400, 430]);
       var speedScale=d3.scaleLinear().domain([120908074,1000000000]).range([5,1]);
+      var divisionOrbitData=[90,140,190,240,290,340,390];
+      svg.selectAll(".division")
+            .data(divisionOrbitData)
+          .enter()
+          .append("circle")
+          .attr("class","division")
+          .each(function(d){
+             d3.select(this)
+                 .attr("cx",w/2)
+                 .attr("cy",h/2)
+                 .attr("r",d)
+                 .style("fill","none")
+                 .style("stroke","black");
+          });
+
       function parseline(line){
+          var year=+formatYear(parseTime(line.year));
+          if(year<=1949){
+              var radiusOrbit=inter1(parseTime(line.year));
+          }
+          else if(year<=1959){
+              radiusOrbit=inter2(parseTime(line.year));
+          }
+          else if(year<=1969){
+              radiusOrbit=inter3(parseTime(line.year));
+          }
+          else if(year<=1979){
+              radiusOrbit=inter4(parseTime(line.year));
+          }
+          else if(year<=1989){
+              radiusOrbit=inter5(parseTime(line.year));
+          }
+          else if(year<=1999){
+              radiusOrbit=inter6(parseTime(line.year));
+          }
+          else if(year<=2009){
+              radiusOrbit=inter7(parseTime(line.year));
+          }
+          else if(year<=2018){
+              radiusOrbit=inter8(parseTime(line.year));
+          }
+//          console.log(radiusOrbit);
         return {
+            title:line.title,
             time:parseTime(line.year),
             box_office:+line.box_office,
             if_female:+line.female_lead,
             if_black:+line.non_white_lead,
-            radiusOrbit:inter(parseTime(line.year)),
+            radiusOrbit:radiusOrbit,
             radiusDot:5,
             speed:speedScale(line.box_office),
             phi0: Math.floor(360*Math.random())
         }
       }
+//      var div = d3.select("#planetarium").append("div")
+//    .attr("class", "tooltip")
+//    .style("opacity", 0);
+
       d3.csv("./movie_actor.csv",parseline,function(data) {
           var planets = [];
           data.forEach(function (d) {
               planets.push({
+                  title:d.title,
                   time:d.time,
                   R: d.radiusOrbit,
                   r: d.radiusDot,
                   speed: d.speed,
+//                  tem:d.speed,
                   phi0: d.phi0,
                   if_female: d.if_female,
                   if_black: d.if_black
               });
           });
-//          console.log(planets);
-//          var test=[];
+
           container.selectAll("g.planet").data(planets).enter().append("g")
               .attr("class", "planet").each(function (d, i) {
               d3.select(this).append("circle").attr("class", "orbit")
@@ -76,20 +130,40 @@
                   .style("stroke", "none");
 
               if (d.if_female === 1 || d.if_black === 1) {
-                  d3.select(this).append("circle").attr("r", d.r).attr("cx", d.R)
-                      .attr("cy", 0).attr("class", "planet minority").style("fill", "#ff8004");
+                  var g=d3.select(this).append("g");
+                  g.append("circle").attr("r", d.r).attr("cx", d.R)
+                      .attr("cy", 0).attr("class", "planet minority").style("fill", "#ff8004").style("stroke","none");
+                  g
+                      .append("text")
+                      .text(function(d){return d.title;})
+                      .attr("class","title")
+                      .attr("x",function(d){return 50})
+                      .attr("y",50)
+                      .style("opacity",0);
+                      g.on("mouseover",function(d){
+//                          console.log("hello");
+                          d3.select(".title")
+                              .transition()
+                              .duration(500)
+                              .style("opacity",1);
+                      })
+                      .on("mouseout",function(d){
+                          d3.select(".title")
+                              .transition()
+                              .duration(500)
+                              .style("opacity",0);
+                      });
               }
               else {
                   d3.select(this).append("circle").attr("r", d.r).attr("cx", d.R)
-                      .attr("cy", 0).attr("class", "planet");
+                      .attr("cy", 0).attr("class", "planet").style("stroke","black");
               }
-//              test.push(formatYear(d.time));
           });
-//          console.log(test);
+
             var j=0;
           d3.select("svg#canvas")
               .on("click",function(){
-                  console.log(j);
+//                  console.log(j);
                   if(j%2===0){
                       j=j+1;
                       container.selectAll("g.planet").data(planets)
