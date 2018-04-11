@@ -139,14 +139,10 @@
                   d3.select(this).append("circle").attr("r", d.r).attr("cx", d.R)
                       .attr("cy", 0).attr("class", "minority").style("fill", "#ff8004").style("stroke","none");
                   m=m+1;
-                  div
-//                      .html(d.title+"<br/>")
-                      .append("svg:image")
-                      .attr("xlink:href","http://marvel-force-chart.surge.sh/marvel_force_chart_img/top_blackwidow.png")
+                  div.append("div")
+                      .html(d.title+"<br/>")
                       .attr("x",0)
                       .attr("y",0)
-                      .attr("width",50)
-                      .attr("height",50)
                       .style("opacity",1);
 
                   var n=m-1;
