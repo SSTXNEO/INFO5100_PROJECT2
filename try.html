@@ -116,7 +116,7 @@
                   R: d.radiusOrbit,
                   r: d.radiusDot,
                   speed: d.speed,
-//                  tem:d.speed,
+                  tem:d.speed,
                   phi0: d.phi0,
                   if_female: d.if_female,
                   if_black: d.if_black
@@ -130,25 +130,26 @@
                   .style("stroke", "none");
 
               if (d.if_female === 1 || d.if_black === 1) {
-                  var g=d3.select(this).append("g");
+                  var g=d3.select(this).append("g").attr("class","tooltip");
                   g.append("circle").attr("r", d.r).attr("cx", d.R)
                       .attr("cy", 0).attr("class", "planet minority").style("fill", "#ff8004").style("stroke","none");
                   g
                       .append("text")
-                      .text(function(d){return d.title;})
+                      .text( d.title)
                       .attr("class","title")
                       .attr("x",function(d){return 50})
                       .attr("y",50)
                       .style("opacity",0);
-                      g.on("mouseover",function(d){
-//                          console.log("hello");
-                          d3.select(".title")
+                  g.select("circle")
+                      .on("mouseover",function(d){
+                          console.log("hello");
+                          g.select("text")
                               .transition()
                               .duration(500)
                               .style("opacity",1);
                       })
                       .on("mouseout",function(d){
-                          d3.select(".title")
+                          g.select("text")
                               .transition()
                               .duration(500)
                               .style("opacity",0);
@@ -168,14 +169,14 @@
                       j=j+1;
                       container.selectAll("g.planet").data(planets)
                       .each(function(d){
-                          d.speed=d.speed/5;
+                          d.speed=0;
                       });
                   }
                   else{
                       j=j+1;
                       container.selectAll("g.planet").data(planets)
                       .each(function(d){
-                          d.speed=d.speed*5;
+                          d.speed=d.tem;
                       });
                   }
               })
