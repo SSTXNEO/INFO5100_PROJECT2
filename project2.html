@@ -36,7 +36,6 @@
 		a:hover {
 			color: #f30;
 			text-decoration: none;
-			border-bottom: 1px solid currentColor;
 		}
 
 		/* scrollama */
@@ -104,26 +103,24 @@
 		}
 
 		.step p {
-			padding-top: 250px;
+			padding-top: 300px;
 			padding-left: 50px;
 			text-align: center;
 			font-size: 1.5rem;
 			font-family: Courier;
 			color: #fff;
 		}
-
+		
 		.orbit {
 	       stroke : #000000;
 	       fill : none;
       	}
-
+	    
 	    .planet {
 	       -webkit-animation: fadein 2s;
-	       stroke : #000000;
 	       fill : #FFFFFF;
-	       opacity: 0.7;
      	}
-
+        
 		@-webkit-keyframes fadein {
     	from { opacity: 0; }
     	to   { opacity: 0.7; }
@@ -133,6 +130,7 @@
 	        fill : #fff;
 	        opacity: 0.7;
 	    }
+
 	</style>
 
 </head>
@@ -146,34 +144,36 @@
 		</div>
 		<div class='scroll__text'>
 			<div class='step' data-step='1'>
-				<p>"The population is becoming more diverse over time and the question is: What is Hollywood doing relative to that population increasing in diversity?"</p>
+				<p style="font-weight:bold; font-size:24pt;">"The population is becoming more diverse over time and the question is: What is Hollywood doing relative to that population increasing in diversity?"</p>
 			</div>
 			<div class='step' data-step='2'>
-				<p>We explored all time domestic box office results and selected 500 movies, with the oldest movie being closest to the center and vice versa.</p>
+				<p>We explored all time domestic box office results and selected 500 highest-grossing movies, with the oldest ones being closest to the center and vice versa.</p></br>
+				<p>1937 - 1949 1/3</p>
 			</div>
 			<div class='step' data-step='3'>
-				<p>STEP 3</p>
+				<p>1950 - 1959 No movie is in the 500 highest-grossing movie list</p></br>
+				<p>1960 - 1969 1/2</p>
 			</div>
 			<div class='step' data-step='4'>
-				<p>STEP 4</p>
+				<p>1970 - 1979 1/9</p>
 			</div>
 			<div class='step' data-step='5'>
-				<p>STEP 5</p>
+				<p>1980 - 1989 4/25</p>
 			</div>
 			<div class='step' data-step='6'>
-				<p>STEP 6</p>
+				<p>1990 - 1999 9/68</p>
 			</div>
 			<div class='step' data-step='7'>
-				<p>STEP 7</p>
+				<p>2000 - 2009 33/170</p>
 			</div>
 			<div class='step' data-step='8'>
-				<p>STEP 8</p>
+				<p>2010 - 2018 59/223</p>
 			</div>
 			<div class='step' data-step='9'>
-				<p>STEP 9</p>
+				<p>Despite the emergence of film and television series heralded for their diversity, Darnell Hunt, sociologist and co-author of UCLA's 2018 Hollywood Diversity Report, maintains little has changed both in front of and behind the camera.</p>
 			</div>
 			<div class='step' data-step='10'>
-				<p>STEP 10</p>
+				<p>However, we do notice some trends from our data...</p>
 			</div>
  		</div>
 	</section>
@@ -228,19 +228,60 @@
 			})
 
 			// update graphic based on step
+			if (response.direction == "up"){
+				chart.selectAll("g.planet")
+				.each(function(d, i){
+					d3.select(this).remove();
+				});
+			}
+
 			if (response.index == 1){
+
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
+					if ((+formatYear(d.time)) > 1937 && (+formatYear(d.time)) < 1949){
 
-					if ((+formatYear(d.time)) >= 1959 && (+formatYear(d.time)) < 1969){
+			            d3.select(this)
+			            .append("circle")
+			            .attr("r", d.r)
+			            .attr("cx", d.R)
+			            .attr("cy", 0)
+			            .attr("class", "planet");
 
-				        d3.select(this)
+			            if (d.if_female === 1 || d.if_black === 1) {
+				                
+				           	d3.select(this)
 				            .append("circle")
 				            .attr("r", d.r)
 				            .attr("cx", d.R)
 				            .attr("cy", 0)
-				            .attr("class", "planet");
-			    	}
+				            .attr("class", "planet minority")
+				            .style("fill", "#1db954");
+
+				            d3.select(this)
+				            .append("text")
+				            .text(d.title)
+				            .attr("class", "title")
+				            .attr("x", function (d) { return 50 })
+				            .attr("y", 50)
+				            .style("opacity", 0);
+
+				            d3.select(this)
+				            .on("mouseover", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 1);
+				            })
+				            .on("mouseout", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 0);
+				            });
+
+			        	}
+			        }
 
 				});
 			}
@@ -249,14 +290,48 @@
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
-					if ((+formatYear(d.time)) >= 1969 && (+formatYear(d.time)) < 1979){
+					if ((+formatYear(d.time)) >= 1959 && (+formatYear(d.time)) < 1969){
 
 				        d3.select(this)
+			            .append("circle")
+			            .attr("r", d.r)
+			            .attr("cx", d.R)
+			            .attr("cy", 0)
+			            .attr("class", "planet");
+
+			            if (d.if_female === 1 || d.if_black === 1) {
+				                
+				           	d3.select(this)
 				            .append("circle")
 				            .attr("r", d.r)
 				            .attr("cx", d.R)
 				            .attr("cy", 0)
-				            .attr("class", "planet");
+				            .attr("class", "planet minority")
+				            .style("fill", "#1db954");
+
+				             d3.select(this)
+				            .append("text")
+				            .text(d.title)
+				            .attr("class", "title")
+				            .attr("x", function (d) { return 50 })
+				            .attr("y", 50)
+				            .style("opacity", 0);
+
+				            d3.select(this)
+				            .on("mouseover", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 1);
+				            })
+				            .on("mouseout", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 0);
+				            });
+
+			        	}
 			    	}
 
 				});
@@ -266,87 +341,268 @@
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
-					if ((+formatYear(d.time)) >= 1979 && (+formatYear(d.time)) < 1989){
+					if ((+formatYear(d.time)) >= 1969 && (+formatYear(d.time)) < 1979){
 
 				        d3.select(this)
+			            .append("circle")
+			            .attr("r", d.r)
+			            .attr("cx", d.R)
+			            .attr("cy", 0)
+			            .attr("class", "planet");
+
+			            if (d.if_female === 1 || d.if_black === 1) {
+				                
+				           	d3.select(this)
 				            .append("circle")
 				            .attr("r", d.r)
 				            .attr("cx", d.R)
 				            .attr("cy", 0)
-				            .attr("class", "planet");
+				            .attr("class", "planet minority")
+				            .style("fill", "#1db954");
+
+				             d3.select(this)
+				            .append("text")
+				            .text(d.title)
+				            .attr("class", "title")
+				            .attr("x", function (d) { return 50 })
+				            .attr("y", 50)
+				            .style("opacity", 0);
+
+				            d3.select(this)
+				            .on("mouseover", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 1);
+				            })
+				            .on("mouseout", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 0);
+				            });
+
+			        	}
 			    	}
 
 				});
 			}
 
 			else if (response.index == 4){
+
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
-					if ((+formatYear(d.time)) >= 1989 && (+formatYear(d.time)) < 1999){
+					if ((+formatYear(d.time)) >= 1979 && (+formatYear(d.time)) < 1989){
 
 				        d3.select(this)
+			            .append("circle")
+			            .attr("r", d.r)
+			            .attr("cx", d.R)
+			            .attr("cy", 0)
+			            .attr("class", "planet");
+			          
+			            if (d.if_female === 1 || d.if_black === 1) {
+				                
+				           	d3.select(this)
 				            .append("circle")
 				            .attr("r", d.r)
 				            .attr("cx", d.R)
 				            .attr("cy", 0)
-				            .attr("class", "planet");
+				            .attr("class", "planet minority")
+				            .style("fill", "#1db954");
+
+				             d3.select(this)
+				            .append("text")
+				            .text(d.title)
+				            .attr("class", "title")
+				            .attr("x", function (d) { return 50 })
+				            .attr("y", 50)
+				            .style("opacity", 0);
+
+				            d3.select(this)
+				            .on("mouseover", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 1);
+				            })
+				            .on("mouseout", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 0);
+				            });
+
+			        	}
 			    	}
 
 				});
 			}
 
 			else if (response.index == 5){
+
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
-					if ((+formatYear(d.time)) >= 1999 && (+formatYear(d.time)) < 2009){
+					if ((+formatYear(d.time)) >= 1989 && (+formatYear(d.time)) < 1999){
 
 				        d3.select(this)
+			            .append("circle")
+			            .attr("r", d.r)
+			            .attr("cx", d.R)
+			            .attr("cy", 0)
+			            .attr("class", "planet");
+
+			            if (d.if_female === 1 || d.if_black === 1) {
+				                
+				           	d3.select(this)
 				            .append("circle")
 				            .attr("r", d.r)
 				            .attr("cx", d.R)
 				            .attr("cy", 0)
-				            .attr("class", "planet");
+				            .attr("class", "planet minority")
+				            .style("fill", "#1db954");
+
+				             d3.select(this)
+				            .append("text")
+				            .text(d.title)
+				            .attr("class", "title")
+				            .attr("x", function (d) { return 50 })
+				            .attr("y", 50)
+				            .style("opacity", 0);
+
+				            d3.select(this)
+				            .on("mouseover", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 1);
+				            })
+				            .on("mouseout", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 0);
+				            });
+			        	}
 			    	}
 
 				});
 			}
 
 			else if (response.index == 6){
+											
+				chart.selectAll("g.planet")
+				.each(function(d, i) {
+
+					if ((+formatYear(d.time)) >= 1999 && (+formatYear(d.time)) < 2009){
+
+				        d3.select(this)
+			            .append("circle")
+			            .attr("r", d.r)
+			            .attr("cx", d.R)
+			            .attr("cy", 0)
+			            .attr("class", "planet");
+
+			            if (d.if_female === 1 || d.if_black === 1) {
+				                
+				           	d3.select(this)
+				            .append("circle")
+				            .attr("r", d.r)
+				            .attr("cx", d.R)
+				            .attr("cy", 0)
+				            .attr("class", "planet minority")
+				            .style("fill", "#1db954");
+
+				             d3.select(this)
+				            .append("text")
+				            .text(d.title)
+				            .attr("class", "title")
+				            .attr("x", function (d) { return 50 })
+				            .attr("y", 50)
+				            .style("opacity", 0);
+
+				            d3.select(this)
+				            .on("mouseover", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 1);
+				            })
+				            .on("mouseout", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 0);
+				            });
+			        	}
+			    	}
+
+				});
+			}
+
+			else if (response.index == 7){
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
 					if ((+formatYear(d.time)) >= 2009 && (+formatYear(d.time)) < 2019){
 
 				        d3.select(this)
+			            .append("circle")
+			            .attr("r", d.r)
+			            .attr("cx", d.R)
+			            .attr("cy", 0)
+			            .attr("class", "planet");
+
+			            if (d.if_female === 1 || d.if_black === 1) {
+				                
+				           	d3.select(this)
 				            .append("circle")
 				            .attr("r", d.r)
 				            .attr("cx", d.R)
 				            .attr("cy", 0)
-				            .attr("class", "planet");
+				            .attr("class", "planet minority")
+				            .style("fill", "#1db954");
+
+				             d3.select(this)
+				            .append("text")
+				            .text(d.title)
+				            .attr("class", "title")
+				            .attr("x", function (d) { return 50 })
+				            .attr("y", 50)
+				            .style("opacity", 0);
+
+				            d3.select(this)
+				            .on("mouseover", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 1);
+				            })
+				            .on("mouseout", function(d){
+				            	d3.select(this).select("text")
+				            	.transition()
+				            	.duration(500)
+				            	.style("opacity", 0);
+				            });
+			        	}
 			    	}
 
 				});
 			}
 
-			else if (response.index == 11){
-				chart.selectAll("g.planet")
-			    .each(function (d, i) {
+			// else if (response.index == 8){
 
-			        if (d.if_female === 1 || d.if_black === 1) {
+			// 	d3.select(".chart")
+			// 	.append("image")
+			// 	.attr("x", 100)
+			// 	.attr("y", 100)
+			// 	.attr("width", 500)
+			// 	.attr("height", 500)
+			// 	.attr("xlink:href", "test.jpg");
+			// }
 
-			            d3.select(this)
-			            .append("circle")
-			            .attr("r", d.r)
-			            .attr("cx", d.R)
-			            .attr("cy", 0)
-			            .attr("class", "planet minority")
-			            .style("fill", "#99ccff");
-
-			            }
-			    });
-			}
 		}
 
 		function handleContainerEnter(response) {
@@ -402,9 +658,9 @@
 		    var container = svg.append("g")
 		    .attr("class","spinner")
 		    .attr("transform", "translate(" + w/2 + "," + h/2 + ")");
-
+		    
 		    var parseTime = d3.timeParse("%d-%b-%Y");
-
+	
  			var inter1=d3.scaleTime().domain([parseTime("01-Jan-1937"),parseTime("31-Dec-1949")]).range([50, 80]);
       		var inter2=d3.scaleTime().domain([parseTime("01-Jan-1950"),parseTime("31-Dec-1959")]).range([100, 130]);
       		var inter3=d3.scaleTime().domain([parseTime("01-Jan-1960"),parseTime("31-Dec-1969")]).range([150, 180]);
@@ -413,9 +669,9 @@
       		var inter6=d3.scaleTime().domain([parseTime("01-Jan-1990"),parseTime("31-Dec-1999")]).range([300, 330]);
       		var inter7=d3.scaleTime().domain([parseTime("01-Jan-2000"),parseTime("31-Dec-2009")]).range([350, 380]);
       		var inter8=d3.scaleTime().domain([parseTime("01-Jan-2010"),parseTime("01-May-2018")]).range([400, 430]);
-
+		    
 		    var speedScale=d3.scaleLinear().domain([120908074,1000000000]).range([5,1]);
-
+		    
 		    var divisionOrbitData=[90,140,190,240,290,340,390];
       		svg.selectAll(".division")
             .data(divisionOrbitData)
@@ -430,11 +686,11 @@
                 .style("fill","none")
                 .style("stroke","#fff");
           	});
-
+		    
 		    function parseline(line){
-
+		        
 		        var year=+formatYear(parseTime(line.year));
-
+		         
 		        if(year<=1949){
 		            var radiusOrbit=inter1(parseTime(line.year));
 		        }
@@ -460,6 +716,7 @@
 		            radiusOrbit=inter8(parseTime(line.year));
 		        }
 		        return {
+		        	title:line.title,
 		            time:parseTime(line.year),
 		            box_office:+line.box_office,
 		            if_female:+line.female_lead,
@@ -470,16 +727,18 @@
 		            phi0: Math.floor(360*Math.random())
         		}
 		    }
-
+		    
 		    d3.csv("./movie_actor.csv",parseline,function(data) {
-
+		        
 		        var planets = [];
 		        data.forEach(function (d) {
 		            planets.push({
+		            	title:d.title,
 		            	time: d.time,
 		                R: d.radiusOrbit,
 		                r: d.radiusDot,
 		                speed: d.speed,
+		                temp: d.speed,
 		                phi0: d.phi0,
 		                if_female: d.if_female,
 		                if_black: d.if_black
@@ -490,36 +749,15 @@
 		        .data(planets)
 		        .enter()
 		        .append("g")
-		        .attr("class", "planet")
+		        .attr("class", "planet")		    
 		        .each(function (d, i) {
-
+		            
 		            d3.select(this)
 		            .append("circle")
 		            .attr("class", "orbit")
 		            .attr("r", d.R)
 		            .style("stroke", "none");
 
-		            // if (d.if_female === 1 || d.if_black === 1) {
-
-		            //     d3.select(this)
-		            //     .append("circle")
-		            //     .attr("r", d.r)
-		            //     .attr("cx", d.R)
-		            //     .attr("cy", 0)
-		            //     .attr("class", "planet minority")
-		            //     .style("fill", "#ff8004");
-
-		            // } else {
-		            	if ((formatYear(d.time)) > 1937 && (formatYear(d.time)) < 1949){
-
-			                d3.select(this)
-			                .append("circle")
-			                .attr("r", d.r)
-			                .attr("cx", d.R)
-			                .attr("cy", 0)
-			                .attr("class", "planet");
-			               }
-		              // }
 		        });
 
 		        var j = 0;
@@ -531,29 +769,29 @@
 		        		container.selectAll("g.planet")
 		        		.data(planets)
 		        		.each(function(d){
-		        			d.speed = d.speed / 5;
+		        			d.speed = 0;
 		        		});
 		        	}else {
 		        		j = j + 1;
 		        		container.selectAll("g.planet")
 		        		.data(planets)
 		        		.each(function(d){
-		        			d.speed = d.speed * 5;
+		        			d.speed = d.temp;
 		        		});
 		        	}
 		        });
 
 		        d3.timer(function () {
-
+		            
 		            var delta = (Date.now() - t0);
 
 		            svg.selectAll(".planet")
 		            .attr("transform", function (d) {
 		                return "rotate(" + d.phi0 + delta * d.speed / 500 + ")";
 		            });
-
+		          
 		        });
-
+		    
 		    });
 
 		}
