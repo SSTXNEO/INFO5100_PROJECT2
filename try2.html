@@ -4,8 +4,12 @@
     <meta charset="utf-8" />
     <title>try</title>
     <script src="./d3.js"></script>
-
+      <script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
     <style>
+        body{
+            background: #000000;
+        }
       .orbit {
         stroke : #000000;
         fill : none;
@@ -13,31 +17,42 @@
       .planet {
         stroke : #000000;
         fill : #FFFFFF;
+          /*filter:blur(5px);*/
       }
       .sun {
         stroke : #000000;
         fill : #000000;
       }
+        .tooltip{
+            position: absolute;
+            width:300px;
+            height:200px;
+            top:50px;
+            left:50px;
+        }
     </style>
 
   </head>
   <body>
 
     <div id="planetarium">
+      <button id="button">rotate</button>
     </div>
 
     <script type="text/javascript">
       var w = 1440, h = 900;
       var t0 = Date.now();
       var svg = d3.select("#planetarium").insert("svg")
-        .attr("width", w).attr("height", h).attr("id","canvas").attr("transform","translate(100,0)");
+        .attr("width", w).attr("height", h).attr("id","canvas").attr("transform","translate(0,0)");
+      var group=svg.append("g").attr("id","group");
 
-      svg.append("circle").attr("r", 10).attr("cx", w/2)
-        .attr("cy", h/2).attr("class", "sun");
+      group.append("circle").attr("r", 10).attr("cx", w/2)
+        .attr("cy", h/2).attr("class", "sun").style("fill","#ffffff");
 
-      var container = svg.append("g")
+      var container = group.append("g")
           .attr("class","spinner")
-        .attr("transform", "translate(" + w/2 + "," + h/2 + ")");
+          .attr("transform", "translate(" + w/2 + "," + h/2 + ")");
+
       var parseTime = d3.timeParse("%d-%b-%Y");
       var formatYear=d3.timeFormat("%Y");
       var inter1=d3.scaleTime().domain([parseTime("01-Jan-1937"),parseTime("31-Dec-1949")]).range([50, 80]);
@@ -49,8 +64,9 @@
       var inter7=d3.scaleTime().domain([parseTime("01-Jan-2000"),parseTime("31-Dec-2009")]).range([350, 380]);
       var inter8=d3.scaleTime().domain([parseTime("01-Jan-2010"),parseTime("01-May-2018")]).range([400, 430]);
       var speedScale=d3.scaleLinear().domain([120908074,1000000000]).range([5,1]);
+//      var planetOpacityScale=d3.scaleLinear().domain([50,430]).range([0,1]);
       var divisionOrbitData=[90,140,190,240,290,340,390];
-      svg.selectAll(".division")
+      group.selectAll(".division")
             .data(divisionOrbitData)
           .enter()
           .append("circle")
@@ -61,7 +77,7 @@
                  .attr("cy",h/2)
                  .attr("r",d)
                  .style("fill","none")
-                 .style("stroke","black");
+                 .style("stroke","white");
           });
 
       function parseline(line){
@@ -103,9 +119,18 @@
             phi0: Math.floor(360*Math.random())
         }
       }
-//      var div = d3.select("#planetarium").append("div")
-//    .attr("class", "tooltip")
-//    .style("opacity", 0);
+      var div = d3.select("#planetarium").append("div")
+          .attr("class", "tooltip");
+
+//      function clicked(v){
+////          console.log(d);
+////          var x, y, k;
+//          var diff={dx:w/2-v,dy:h/2};
+////
+//          d3.select("#canvas").transition()
+//              .duration(750)
+//              .attr("transform", "translate("+diff.dx+","+diff.dy+")");
+//              }
 
       d3.csv("./movie_actor.csv",parseline,function(data) {
           var planets = [];
@@ -116,13 +141,14 @@
                   R: d.radiusOrbit,
                   r: d.radiusDot,
                   speed: d.speed,
-//                  tem:d.speed,
+                  tem:d.speed,
                   phi0: d.phi0,
                   if_female: d.if_female,
                   if_black: d.if_black
               });
           });
-
+            var m=0;
+            var k=0;
           container.selectAll("g.planet").data(planets).enter().append("g")
               .attr("class", "planet").each(function (d, i) {
               d3.select(this).append("circle").attr("class", "orbit")
@@ -130,61 +156,172 @@
                   .style("stroke", "none");
 
               if (d.if_female === 1 || d.if_black === 1) {
-                  var g=d3.select(this).append("g");
-                  g.append("circle").attr("r", d.r).attr("cx", d.R)
-                      .attr("cy", 0).attr("class", "planet minority").style("fill", "#ff8004").style("stroke","none");
-                  g
-                      .append("text")
-                      .text(function(d){return d.title;})
-                      .attr("class","title")
-                      .attr("x",function(d){return 50})
-                      .attr("y",50)
-                      .style("opacity",0);
-                      g.on("mouseover",function(d){
-//                          console.log("hello");
-                          d3.select(".title")
+                    m=m+1;
+//                    console.log(m);
+                  d3.select(this).append("circle").attr("r", d.r).attr("cx", d.R)
+                      .attr("cy", 0).attr("id", "m"+m).attr("class","minority").style("fill", "#f77062").style("stroke","none")
+                      .on("mouseover",function(d){
+                          console.log(this);
+                          console.log(d3.select(this).node().getBoundingClientRect());
+                          div.select("div:nth-child("+n+")")
                               .transition()
                               .duration(500)
+                              .style("color","#ffffff")
                               .style("opacity",1);
                       })
                       .on("mouseout",function(d){
-                          d3.select(".title")
+                          div.select("div:nth-child("+n+")")
                               .transition()
                               .duration(500)
-                              .style("opacity",0);
+                              .style("color","#ffffff")
+                              .style("opacity",0.3);
+                      })
+                      .on("click",function(d){
+                          console.log("fuck");
+                          if(k%3===0){
+                              k=k+1;
+                                var zoom, zoomable_layer;
+                          zoomable_layer = group;
+
+                          zoom = d3.zoom().scaleExtent([1, 10]).on('zoom', function() {
+                            return zoomable_layer.attrs({
+                              transform: d3.event.transform
+                            });
+                          });
+
+                          group.call(zoom);
+
+                          to_bounding_box = function(W, H, center, w, h, margin) {
+                            var k, kh, kw, x, y;
+                            kw = (W - margin) / (w*20);
+                            kh = (H - margin) / (h*20);
+                            k = d3.min([kw, kh]);
+                            x = W / 2 - center.x * k;
+                            y = H / 2 - center.y * k;
+                            return d3.zoomIdentity.translate(x, y).scale(k);
+                          };
+                            var center, transform;
+                            center = {
+                              x: d3.select(this).node().getBoundingClientRect().x,
+                              y: d3.select(this).node().getBoundingClientRect().y
+                            };
+                            console.log(center);
+                            transform = to_bounding_box(w, h, center, 2*d.r, 2*d.r, h / 10);
+                            group.transition().duration(2000).call(zoom.transform, transform);
+//                            group.call(zoom.transform, transform);
+                          }
+                          else if(k%3===1){
+                              k=k+1;
+                              group.transition()
+                          .duration(2000)
+                          .attr("transform","translate(0,0)");
+                          }
+                          else if(k%3===2){
+                                k=k+1;
+                                zoomable_layer = group;
+                          zoom = d3.zoom().scaleExtent([1, 10]).on('zoom', function() {
+                            return zoomable_layer.attrs({
+                              transform: d3.event.transform
+                            });
+                          });
+
+                          group.call(zoom);
+                              center = {
+                              x: d3.select(this).node().getBoundingClientRect().x,
+                              y: d3.select(this).node().getBoundingClientRect().y
+                            };
+                                                            console.log(center);
+                            transform = to_bounding_box(w, h, center, 2*d.r, 2*d.r, h / 10);
+                            group.transition().duration(2000).call(zoom.transform, transform);
+                          }
+
+//                          var diff={dx:w/2-d3.select(this).node().getBoundingClientRect().x,dy:h/2-d3.select(this).node().getBoundingClientRect().y};
+//                          d3.select("#group").transition()
+//                              .duration(750)
+//                              .attr("transform", "translate("+diff.dx+","+diff.dy+")");
+                      });
+                    div.append("div")
+                      .attr("class","title")
+                      .html(d.title+"<br/>")
+                      .attr("x",0)
+                      .attr("y",0)
+                      .style("color","#ffffff")
+                      .style("opacity",0.3);
+
+                  var n=m;
+
+//                  d3.select(this)
+//                      .on("mouseover",function(d){
+//                          console.log(m);
+//                          console.log(d3.select("circle#"+"m"+m).node().getBoundingClientRect());
+//                          div.select("div:nth-child("+n+")")
+//                              .transition()
+//                              .duration(500)
+//                              .style("color","#ffffff")
+//                              .style("opacity",1);
+//                      })
+//                      .on("mouseout",function(d){
+//                          div.select("div:nth-child("+n+")")
+//                              .transition()
+//                              .duration(500)
+//                              .style("color","#ffffff")
+//                              .style("opacity",0.3);
+//                      })
+//                      .on("click",function(d){
+////                          console.log(n);
+//                                var diff={dx:w/2-d3.select("circle#"+"m"+m).node().getBoundingClientRect().x,dy:h/2-d3.select("circle#"+"m"+m).node().getBoundingClientRect().y};
+//                          d3.select("#group").transition()
+//                                              .duration(750)
+//                                              .attr("transform", "translate("+diff.dx+","+diff.dy+")");
+////                          console.log([d3.select(this).node().getBoundingClientRect().x,d3.select(this).node().getBoundingClientRect().y]);
+//                      });
+                  div.select("div.title:nth-child("+n+")")
+                    .on("mouseover",function(d){
+//                        console.log("hello");
+                        d3.select("#m"+n)
+                            .transition()
+                            .duration(500)
+                            .attr("r",10);
+                    })
+                      .on("mouseout",function(d){
+                         d3.select("#m"+n)
+                             .transition()
+                             .duration(500)
+                             .attr("r",5);
                       });
               }
               else {
                   d3.select(this).append("circle").attr("r", d.r).attr("cx", d.R)
-                      .attr("cy", 0).attr("class", "planet").style("stroke","black");
+                      .attr("cy", 0).attr("class", "planet").style("stroke","none").style("fill","#ffffff");
               }
           });
-
             var j=0;
-          d3.select("svg#canvas")
+          d3.select("#button")
               .on("click",function(){
 //                  console.log(j);
                   if(j%2===0){
                       j=j+1;
                       container.selectAll("g.planet").data(planets)
                       .each(function(d){
-                          d.speed=d.speed/5;
+                          d.speed=0;
                       });
                   }
                   else{
                       j=j+1;
                       container.selectAll("g.planet").data(planets)
                       .each(function(d){
-                          d.speed=d.speed*5;
+                          d.speed=d.tem;
                       });
+                      group.transition()
+                          .duration(2000)
+                          .attr("transform","translate(0,0)")
                   }
-              })
-              ;
+              });
 
           d3.timer(function () {
               var delta = (Date.now() - t0);
 
-              svg.selectAll(".planet")
+              group.selectAll(".planet")
                   .attr("transform", function (d) {
                       return "rotate(" + d.phi0 + delta * d.speed / 200 + ")";
                   });
@@ -198,3 +335,6 @@
   </body>
 
 </html>
+
+<!--var a=d3.select("circle#m24")-->
+<!--a.node().getBoundingClientRect()-->
