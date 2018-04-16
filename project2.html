@@ -184,7 +184,15 @@
 	<script src="https://d3js.org/d3.v4.min.js"></script>
 	<script src='https://unpkg.com/intersection-observer'></script>
 	<script src='https://unpkg.com/scrollama'></script>
+	<script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
 	<script>
+		var width = 1200, height = 900;
+		    var t0 = Date.now();
+		    var svg = d3.select(".chart")
+		    .insert("svg")
+		    .attr("width", width)
+		    .attr("height", height)
+		    .attr("id", "canvas");
 		// using d3 for convenience
 		var container = d3.select('#scroll');
 		var graphic = container.select('.scroll__graphic');
@@ -235,84 +243,11 @@
 			// add color to current step only
 			step.classed('is-active', function (d, i) {
 				return i === response.index;
-			})
-
-			// update graphic based on step
-			// if (response.direction == "up" && response.index < 2){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-
-			// 		if ((+formatYear(d.time)) >= 1937 && (+formatYear(d.time)) < 1949){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// } else if (response.direction == "up" && response.index < 4){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-
-			// 		if ((+formatYear(d.time)) >= 1959 && (+formatYear(d.time)) < 1969){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// } else if (response.direction == "up" && response.index < 5){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-
-			// 		if ((+formatYear(d.time)) >= 1969 && (+formatYear(d.time)) < 1979){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// } else if (response.direction == "up" && response.index < 6){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-
-			// 		if ((+formatYear(d.time)) >= 1979 && (+formatYear(d.time)) < 1989){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// } else if (response.direction == "up" && response.index < 7){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-
-			// 		if ((+formatYear(d.time)) >= 1989 && (+formatYear(d.time)) < 1999){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// } else if (response.direction == "up" && response.index < 8){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-
-			// 		if ((+formatYear(d.time)) >= 1999 && (+formatYear(d.time)) <= 2009){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// } else if (response.direction == "up" && response.index < 9){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-			// 		if ((+formatYear(d.time)) >= 2009 && (+formatYear(d.time)) < 2019){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// }
+			});
 
 			if (response.direction == "down" && response.index == 2 && appended1 == false){
 
 				var c = 0;
-//				var dd=0;
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
@@ -388,32 +323,6 @@
 					        }
 
 			        	}
-
-			      //   	if (appended1 == false){
-
-				     //    	d3.select("#step3").append("div")
-					    //         .html(d.title + "<br/>")
-					    //         .style("color", "grey")
-					    //         .style("font-family", "Courier")
-					    //         .on("mouseover", function(d){
-							  //   	console.log("here");
-									// console.log(c);
-							  //   	d3.select("#c" + c)
-							  //   	.transition()
-							  //   	.attr("fill", "#92bcea")
-							  //   	.duration(500)
-							  //   	.attr("r", 10);
-						   //  	})
-							  //   .on("mouseout", function(d){
-							  //   	console.log("here2");
-							  //   	console.log(c);
-							  //   	d3.select("#c" + c)
-							  //   	.transition()
-							  //   	.duration(500)
-							  //   	.attr("r", 5);
-							  //   });
-
-					    // }
 
 			        }
 
@@ -983,14 +892,50 @@
 			}
 
 			if (response.index == 11){
+			    d3.selectAll("g.planet")
+					.each(function(d) {
+						d.speed = 0;
+                        });
+				d3.selectAll("g.planet").selectAll("circle")
+					.filter(function(d){return d.title!=="I Am Legend"})
+					.transition()
+					.duration(500)
+					.style("opacity",0.1);
+				d3.selectAll("g.planet").selectAll("circle")
+					.filter(function(d){return d.title==="I Am Legend"})
+					.transition()
+					.duration(500)
+					.attr("r",10);
 
-				//TODO
 
+				var zoom, zoomable_layer;
+				  var amp=1.5;
+				  zoomable_layer = svg;
 
+				  zoom = d3.zoom().scaleExtent([1, 10]).on('zoom', function() {
+					return zoomable_layer.attrs({
+					  transform: d3.event.transform
+					});
+				  });
+				  svg.call(zoom);
 
+					to_bounding_box = function(W, H, center) {
+					var x, y;
+					x = W / 2 - center.x*amp;
+					y = H / 2 - center.y*amp;
+					return d3.zoomIdentity.translate(x,y).scale(amp);
+				  };
+					var center, transform;
+					center = {
+					  x: d3.select("#m1").node().getBoundingClientRect().x,
+					  y: d3.select("#m1").node().getBoundingClientRect().y
+					};
+					transform = to_bounding_box(width, height, center);
+					svg.transition().duration(2000).call(zoom.transform, transform);
+
+//				  console.log(d3.select("#h1").node().getBoundingClientRect());
 			}
 
-			// console.log(response.index);
 
 		}
 
@@ -1030,23 +975,17 @@
 			// setup resize event
 			window.addEventListener('resize', handleResize);
 
-			var w = 1000, h = 900;
-		    var t0 = Date.now();
-		    var svg = d3.select(".chart")
-		    .insert("svg")
-		    .attr("width", w)
-		    .attr("height", h)
-		    .attr("id", "canvas");
+
 
 		    svg.append("circle")
 		    .attr("r", 10)
-		    .attr("cx", w/2)
-		    .attr("cy", h/2)
+		    .attr("cx", width/2)
+		    .attr("cy", height/2)
 		    .attr("class", "sun");
 
 		    var container = svg.append("g")
 		    .attr("class","spinner")
-		    .attr("transform", "translate(" + w/2 + "," + h/2 + ")");
+		    .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
 
 		    var parseTime = d3.timeParse("%d-%b-%Y");
 
@@ -1069,8 +1008,8 @@
           	.attr("class","division")
          	.each(function(d){
              	d3.select(this)
-                .attr("cx", w/2)
-                .attr("cy", h/2)
+                .attr("cx", width/2)
+                .attr("cy", height/2)
                 .attr("r", d)
                 .style("fill","none")
                 .style("stroke","#fff");
