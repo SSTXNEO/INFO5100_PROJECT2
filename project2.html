@@ -108,17 +108,17 @@
 			font-family: Courier;
 			color: #fff;
 		}
-		
+
 		.orbit {
 	       stroke : #000000;
 	       fill : none;
       	}
-	    
+
 	    .planet {
 	       -webkit-animation: fadein 2s;
 	       fill : #FFFFFF;
      	}
-        
+
 		@-webkit-keyframes fadein {
     	from { opacity: 0; }
     	to   { opacity: 0.7; }
@@ -195,8 +195,8 @@
 		var appended1 = false;
 		var appended2 = false;
 		var appended3 = false;
-		var appended4 = false; 
-		var appended5 = false; 
+		var appended4 = false;
+		var appended5 = false;
 		var appended6 = false;
 		var appended7 = false;
 
@@ -239,71 +239,71 @@
 
 			// update graphic based on step
 			// if (response.direction == "up" && response.index < 2){
-				
+
 			// 	chart.selectAll("g.planet")
 			// 	.each(function(d, i){
 
 			// 		if ((+formatYear(d.time)) >= 1937 && (+formatYear(d.time)) < 1949){
-						
+
 			// 			d3.select(this).remove();
 			// 		}
 			// 	});
 			// } else if (response.direction == "up" && response.index < 4){
-				
+
 			// 	chart.selectAll("g.planet")
 			// 	.each(function(d, i){
 
 			// 		if ((+formatYear(d.time)) >= 1959 && (+formatYear(d.time)) < 1969){
-						
+
 			// 			d3.select(this).remove();
 			// 		}
 			// 	});
 			// } else if (response.direction == "up" && response.index < 5){
-				
+
 			// 	chart.selectAll("g.planet")
 			// 	.each(function(d, i){
 
 			// 		if ((+formatYear(d.time)) >= 1969 && (+formatYear(d.time)) < 1979){
-						
+
 			// 			d3.select(this).remove();
 			// 		}
 			// 	});
 			// } else if (response.direction == "up" && response.index < 6){
-				
+
 			// 	chart.selectAll("g.planet")
 			// 	.each(function(d, i){
 
 			// 		if ((+formatYear(d.time)) >= 1979 && (+formatYear(d.time)) < 1989){
-						
+
 			// 			d3.select(this).remove();
 			// 		}
 			// 	});
 			// } else if (response.direction == "up" && response.index < 7){
-				
+
 			// 	chart.selectAll("g.planet")
 			// 	.each(function(d, i){
 
 			// 		if ((+formatYear(d.time)) >= 1989 && (+formatYear(d.time)) < 1999){
-						
+
 			// 			d3.select(this).remove();
 			// 		}
 			// 	});
 			// } else if (response.direction == "up" && response.index < 8){
-				
+
 			// 	chart.selectAll("g.planet")
 			// 	.each(function(d, i){
 
 			// 		if ((+formatYear(d.time)) >= 1999 && (+formatYear(d.time)) <= 2009){
-						
+
 			// 			d3.select(this).remove();
 			// 		}
 			// 	});
 			// } else if (response.direction == "up" && response.index < 9){
-				
+
 			// 	chart.selectAll("g.planet")
 			// 	.each(function(d, i){
 			// 		if ((+formatYear(d.time)) >= 2009 && (+formatYear(d.time)) < 2019){
-						
+
 			// 			d3.select(this).remove();
 			// 		}
 			// 	});
@@ -312,7 +312,7 @@
 			if (response.direction == "down" && response.index == 2 && appended1 == false){
 
 				var c = 0;
-
+//				var dd=0;
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
@@ -326,8 +326,6 @@
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
-
-			            	c = c + 1;
 
 				           	if (d.if_female === 1){
 
@@ -357,15 +355,16 @@
 							    	.duration(500)
 							    	.attr("r", 5);
 							    });
-					           
-					        } else if (d.if_black === 1) {
 
+					        } else if (d.if_black === 1) {
+				           	    c = c + 1;
+				           	    var dd=c;
 					        	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
 					            .attr("cy", 0)
-					            .attr("id", "c"+c)
+					            .attr("id", "d"+dd)
 					            .attr("class", "planet minority")
 					            .style("fill", "#92bcea");
 
@@ -374,14 +373,14 @@
 					            .style("color", "grey")
 					            .style("font-family", "Courier")
 					            .on("mouseover", function(d){
-							    	d3.select("#c" + c)
+							    	d3.select("#d" + dd)
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
 							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
-							    	d3.select("#c" + c)
+							    	d3.select("#d" + dd)
 							    	.transition()
 							    	.duration(500)
 							    	.attr("r", 5);
@@ -391,7 +390,7 @@
 			        	}
 
 			      //   	if (appended1 == false){
-				        	
+
 				     //    	d3.select("#step3").append("div")
 					    //         .html(d.title + "<br/>")
 					    //         .style("color", "grey")
@@ -474,7 +473,7 @@
 							    	.duration(500)
 							    	.attr("r", 5);
 							    });
-					           
+
 					        } else if (d.if_black === 1) {
 
 					        	d3.select(this)
@@ -562,7 +561,7 @@
 							    	.duration(500)
 							    	.attr("r", 5);
 							    });
-					           
+
 					        } else if (d.if_black === 1) {
 
 					        	d3.select(this)
@@ -604,11 +603,11 @@
 
 			else if (response.direction == "down" && response.index == 6 && appended4 == false){
 
+			    var g = 0;
+				var h = 0;
+
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
-
-					var g = 0;
-					var h = 0;
 
 					if ((+formatYear(d.time)) > 1979 && (+formatYear(d.time)) <= 1989){
 
@@ -651,11 +650,11 @@
 							    	.duration(500)
 							    	.attr("r", 5);
 							    });
-					           
+
 					        } else if (d.if_black === 1) {
-
-					        	h = h + 1;
-
+								h=h+1;
+//								console.log(h);
+								var o=h;
 					        	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
@@ -665,21 +664,21 @@
 					            .attr("class", "planet minority")
 					            .style("fill", "#92bcea");
 
-					            console.log(h);
 
 					            d3.select("#step7").append("div")
 					            .html(d.title + "<br/>")
 					            .style("color", "grey")
 					            .style("font-family", "Courier")
 					            .on("mouseover", function(d){
-							    	d3.select("#h" + h)
+//					                console.log(z);
+							    	d3.select("#h" + o)
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
 							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
-							    	d3.select("#h" + h)
+							    	d3.select("#h" + o)
 							    	.transition()
 							    	.duration(500)
 							    	.attr("r", 5);
@@ -698,14 +697,13 @@
 
 			else if (response.direction == "down" && response.index == 7 && appended5 == false){
 
+			    var j = 0;
+				var k = 0;
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
-					var i = 0;
-					var j = 0;
-
 					if ((+formatYear(d.time)) >= 1989 && (+formatYear(d.time)) < 1999){
-				        
+
 			            d3.select(this)
 			            .append("circle")
 			            .attr("r", d.r)
@@ -717,14 +715,15 @@
 
 				           	if (d.if_female === 1){
 
-				           		i = i + 1;
-				           		console.log(i);
+				           		j = j + 1;
+				           		var p=j;
+//				           		console.log(i);
 					           	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
 					            .attr("cy", 0)
-					            .attr("id", "i"+i)
+					            .attr("id", "i"+p)
 					            .attr("class", "planet minority")
 					            .style("fill", "#1db954");
 
@@ -733,47 +732,47 @@
 					            .style("color", "grey")
 					            .style("font-family", "Courier")
 					            .on("mouseover", function(d){
-							    	d3.select("#i" + i)
+							    	d3.select("#i" + p)
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
 							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
-							    	d3.select("#i" + i)
+							    	d3.select("#i" + p)
 							    	.transition()
 							    	.duration(500)
 							    	.attr("r", 5);
 							    });
-					           
+
 					        } else if (d.if_black === 1) {
 
-					        	j = j + 1;
-
+					        	k = k + 1;
+								var q=k;
 					        	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
-					            .attr("id", "j"+j)
+					            .attr("id", "j"+q)
 					            .attr("cy", 0)
 					            .attr("class", "planet minority")
 					            .style("fill", "#92bcea");
 
-					            console.log(j);
+//					            console.log(j);
 
 					            d3.select("#step8").append("div")
 					            .html(d.title + "<br/>")
 					            .style("color", "grey")
 					            .style("font-family", "Courier")
 					            .on("mouseover", function(d){
-							    	d3.select("#j" + j)
+							    	d3.select("#j" + q)
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
 							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
-							    	d3.select("#j" + j)
+							    	d3.select("#j" + q)
 							    	.transition()
 							    	.duration(500)
 							    	.attr("r", 5);
@@ -789,12 +788,13 @@
 			}
 
 			else if (response.index == 8){
-		
+			    var l=0;
+				var m=0;
+
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
 					if ((+formatYear(d.time)) >= 1999 && (+formatYear(d.time)) < 2009){
-
 			            d3.select(this)
 			            .append("circle")
 			            .attr("r", d.r)
@@ -803,33 +803,74 @@
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
-				                
-				           	if (d.if_female === 1){
 
+				           	if (d.if_female === 1){
+								l=l+1;
+								var r=l;
 					           	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
 					            .attr("cy", 0)
+								.attr("id","l"+r)
 					            .attr("class", "planet minority")
 					            .style("fill", "#1db954");
 
+					           	d3.select("#step9").append("div")
+					            .html(d.title + "<br/>")
+					            .style("color", "grey")
+					            .style("font-family", "Courier")
+					            .on("mouseover", function(d){
+							    	d3.select("#l" + r)
+							    	.transition()
+							    	.attr("fill", "#92bcea")
+							    	.duration(500)
+							    	.attr("r", 10);
+						    	})
+							    .on("mouseout", function(d){
+							    	d3.select("#l" + r)
+							    	.transition()
+							    	.duration(500)
+							    	.attr("r", 5);
+							    });
+
 					        } else if (d.if_black === 1) {
 
+				           	    m=m+1;
+				           	    var s=m;
 					        	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
 					            .attr("cy", 0)
+								.attr("id","m"+s)
 					            .attr("class", "planet minority")
 					            .style("fill", "#92bcea");
+
+					        	d3.select("#step9").append("div")
+					            .html(d.title + "<br/>")
+					            .style("color", "grey")
+					            .style("font-family", "Courier")
+					            .on("mouseover", function(d){
+							    	d3.select("#m" + s)
+							    	.transition()
+							    	.attr("fill", "#92bcea")
+							    	.duration(500)
+							    	.attr("r", 10);
+						    	})
+							    .on("mouseout", function(d){
+							    	d3.select("#m" + s)
+							    	.transition()
+							    	.duration(500)
+							    	.attr("r", 5);
+							    });
 
 					        }
 
 			        	}
 
 			        	if (appended6 == false){
-				        	
+
 				        	d3.select("#step9").append("text")
 					            .text(d.title + "  ")
 					            .style("color", "grey")
@@ -839,18 +880,20 @@
 					    }
 					}
 				});
-					
-				appended6 = true;	
+
+				appended6 = true;
 			}
 
 			else if (response.index == 9){
+
+			    var n=0;
+				var oo=0;
 
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
 					if ((+formatYear(d.time)) >= 2009 && (+formatYear(d.time)) < 2019){
 
-				       
 			            d3.select(this)
 			            .append("circle")
 			            .attr("r", d.r)
@@ -859,32 +902,72 @@
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
-				                
-				           	if (d.if_female === 1){
 
+				           	if (d.if_female === 1){
+								n=n+1;
+								var t=n;
 					           	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
 					            .attr("cy", 0)
+								.attr("id","n"+t)
 					            .attr("class", "planet minority")
 					            .style("fill", "#1db954");
 
-					        } else if (d.if_black === 1) {
+					           	d3.select("#step10").append("div")
+					            .html(d.title + "<br/>")
+					            .style("color", "grey")
+					            .style("font-family", "Courier")
+					            .on("mouseover", function(d){
+							    	d3.select("#n" + t)
+							    	.transition()
+							    	.attr("fill", "#92bcea")
+							    	.duration(500)
+							    	.attr("r", 10);
+						    	})
+							    .on("mouseout", function(d){
+							    	d3.select("#n" + t)
+							    	.transition()
+							    	.duration(500)
+							    	.attr("r", 5);
+							    });
 
+					        } else if (d.if_black === 1) {
+								oo=oo+1;
+								var u=oo;
 					        	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
 					            .attr("cy", 0)
+								.attr("id","oo"+u)
 					            .attr("class", "planet minority")
 					            .style("fill", "#92bcea");
+
+					        	d3.select("#step10").append("div")
+					            .html(d.title + "<br/>")
+					            .style("color", "grey")
+					            .style("font-family", "Courier")
+					            .on("mouseover", function(d){
+							    	d3.select("#oo" + u)
+							    	.transition()
+							    	.attr("fill", "#92bcea")
+							    	.duration(500)
+							    	.attr("r", 10);
+						    	})
+							    .on("mouseout", function(d){
+							    	d3.select("#oo" + u)
+							    	.transition()
+							    	.duration(500)
+							    	.attr("r", 5);
+							    });
 
 					        }
 			        	}
 
 			    		if (appended7 == false){
-				        	
+
 				        	d3.select("#step10").append("text")
 					            .text(d.title + "  ")
 					            .style("color", "grey")
@@ -964,9 +1047,9 @@
 		    var container = svg.append("g")
 		    .attr("class","spinner")
 		    .attr("transform", "translate(" + w/2 + "," + h/2 + ")");
-		    
+
 		    var parseTime = d3.timeParse("%d-%b-%Y");
-	
+
  			var inter1=d3.scaleTime().domain([parseTime("01-Jan-1937"),parseTime("31-Dec-1949")]).range([50, 80]);
       		var inter2=d3.scaleTime().domain([parseTime("01-Jan-1950"),parseTime("31-Dec-1959")]).range([100, 130]);
       		var inter3=d3.scaleTime().domain([parseTime("01-Jan-1960"),parseTime("31-Dec-1969")]).range([150, 180]);
@@ -975,9 +1058,9 @@
       		var inter6=d3.scaleTime().domain([parseTime("01-Jan-1990"),parseTime("31-Dec-1999")]).range([300, 330]);
       		var inter7=d3.scaleTime().domain([parseTime("01-Jan-2000"),parseTime("31-Dec-2009")]).range([350, 380]);
       		var inter8=d3.scaleTime().domain([parseTime("01-Jan-2010"),parseTime("01-May-2018")]).range([400, 430]);
-		    
+
 		    var speedScale=d3.scaleLinear().domain([120908074,1000000000]).range([5,1]);
-		    
+
 		    var divisionOrbitData=[90,140,190,240,290,340,390];
       		svg.selectAll(".division")
             .data(divisionOrbitData)
@@ -992,11 +1075,11 @@
                 .style("fill","none")
                 .style("stroke","#fff");
           	});
-		    
+
 		    function parseline(line){
-		        
+
 		        var year=+formatYear(parseTime(line.year));
-		         
+
 		        if(year<=1949){
 		            var radiusOrbit=inter1(parseTime(line.year));
 		        }
@@ -1033,9 +1116,9 @@
 		            phi0: Math.floor(360*Math.random())
         		}
 		    }
-		    
+
 		    d3.csv("./movie_actor.csv",parseline,function(data) {
-		        
+
 		        var planets = [];
 		        data.forEach(function (d) {
 		            planets.push({
@@ -1055,9 +1138,9 @@
 		        .data(planets)
 		        .enter()
 		        .append("g")
-		        .attr("class", "planet")		    
+		        .attr("class", "planet")
 		        .each(function (d, i) {
-		            
+
 		            d3.select(this)
 		            .append("circle")
 		            .attr("class", "orbit")
@@ -1141,16 +1224,16 @@
 				.style("fill", "white");
 
 		        d3.timer(function () {
-		            
+
 		            var delta = (Date.now() - t0);
 
 		            svg.selectAll(".planet")
 		            .attr("transform", function (d) {
 		                return "rotate(" + d.phi0 + delta * d.speed / 500 + ")";
 		            });
-		          
+
 		        });
-		    
+
 		    });
 
 		}
