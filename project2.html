@@ -213,7 +213,7 @@
 		var step = text.selectAll('.step');
 		// format the year
 		var formatYear=d3.timeFormat("%Y");
-		// stop appending the narratives twice 
+		// stop appending the narratives twice
 		var appended1 = false;
 		var appended2 = false;
 		var appended3 = false;
@@ -366,6 +366,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+                        .style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -454,6 +455,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+                        .style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -558,6 +560,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+                        .style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -661,6 +664,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+                        .style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -785,6 +789,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+                        .style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -842,7 +847,7 @@
 					        	k = k + 1;
 
 								var q = k;
-					        	
+
 					        	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
@@ -895,7 +900,7 @@
 			}
 
 			else if (response.direction == "down" && response.index == 8 && appended6 == false){
-			    
+
 			    var l = 0;
 				var m = 0;
 				var minorityCounter = 0;
@@ -909,6 +914,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+                        .style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -918,11 +924,11 @@
 			            	if (minorityCounter < 11 || minorityCounter > 23){
 
 					           	if (d.if_female === 1){
-									
+
 									l = l + 1;
-									
+
 									var r = l;
-						           	
+
 						           	d3.select(this)
 						            .append("circle")
 						            .attr("r", d.r)
@@ -970,7 +976,7 @@
 					           	    m = m + 1;
 
 					           	    var s = m;
-						        	
+
 						        	d3.select(this)
 						            .append("circle")
 						            .attr("r", d.r)
@@ -1043,6 +1049,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+                        .style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -1052,11 +1059,11 @@
 			            	if (minorityCounter < 11 || minorityCounter > 49){
 
 					           	if (d.if_female === 1){
-									
+
 									n = n + 1;
-									
+
 									var t = n;
-						           	
+
 						           	d3.select(this)
 						            .append("circle")
 						            .attr("r", d.r)
@@ -1100,11 +1107,11 @@
 								    });
 
 						        } else if (d.if_black === 1) {
-									
+
 									oo = oo + 1;
-									
+
 									var u = oo;
-						        	
+
 						        	d3.select(this)
 						            .append("circle")
 						            .attr("r", d.r)
@@ -1178,38 +1185,38 @@
 				.transition()
 				.duration(500)
 				.style("opacity",0.1);
-				
+
 				d3.selectAll("g.planet").selectAll("circle")
 				.filter(function(d){ return (d.title==="Black Panther") || (d.title==="Rogue One: A Star Wars Story") || (d.title==="Beauty and the Beast&y=2017") || (d.title==="Finding Dory") })
 				.transition()
 				.duration(500)
 				.attr("r",10);
 
-				// var zoom, zoomable_layer;
-				// var amp = 1;
-				// zoomable_layer = svg;
-				// zoom = d3.zoom().scaleExtent([1, 10]).on('zoom', function() {
-					
-				// 	return zoomable_layer.attrs({
-				// 		transform: d3.event.transform
-				// 	});
-				// });
-
-				// svg.call(zoom);
-				// to_bounding_box = function(W, H, center) {
-				// 	var x, y;
-				// 	x = W / 2 - center.x*amp;
-				// 	y = H / 2 - center.y*amp;
-				// 	return d3.zoomIdentity.translate(x,y).scale(amp);
-				// };
-				// var center, transform;
-				// center = {
-				// 	x: d3.select("#m1").node().getBoundingClientRect().x,
-				// 	y: d3.select("#m1").node().getBoundingClientRect().y
-				// };
-
-				// transform = to_bounding_box(width, height, center);
-				// svg.transition().duration(2000).call(zoom.transform, transform);
+//				 var zoom, zoomable_layer;
+//				 var amp = 1;
+//				 zoomable_layer = svg;
+//				 zoom = d3.zoom().scaleExtent([1, 10]).on('zoom', function() {
+//
+//				 	return zoomable_layer.attrs({
+//				 		transform: d3.event.transform
+//				 	});
+//				 });
+//
+//				 svg.call(zoom);
+//				 to_bounding_box = function(W, H, center) {
+//				 	var x, y;
+//				 	x = W / 2 - center.x*amp;
+//				 	y = H / 2 - center.y*amp;
+//				 	return d3.zoomIdentity.translate(x,y).scale(amp);
+//				 };
+//				 var center, transform;
+//				 center = {
+//				 	x: d3.select("#m1").node().getBoundingClientRect().x,
+//				 	y: d3.select("#m1").node().getBoundingClientRect().y
+//				 };
+//
+//				 transform = to_bounding_box(width, height, center);
+//				 svg.transition().duration(2000).call(zoom.transform, transform);
 
 			}
 
