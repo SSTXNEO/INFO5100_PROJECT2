@@ -101,14 +101,22 @@
 		}
 
 		.step p {
-			padding-top: 150px;
-			padding-left: 50px;
-			text-align: center;
+			padding: 150px 0 50px 50px;
+			margin: auto 0;
+			/*text-align: center;*/
 			font-size: 1.5rem;
 			font-family: Courier;
 			color: #fff;
 		}
 
+		.step div{
+			text-align: center;
+			padding-top: 10px
+		}
+
+		.step span{
+			margin:auto 0;
+		}
 		.orbit {
 	       stroke : #000000;
 	       fill : none;
@@ -185,6 +193,7 @@
 	<script src='https://unpkg.com/intersection-observer'></script>
 	<script src='https://unpkg.com/scrollama'></script>
 	<script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+
 	<script>
 		var width = 1200, height = 900;
 		    var t0 = Date.now();
@@ -245,6 +254,8 @@
 				return i === response.index;
 			});
 
+			var minorityScroller=0;
+
 			if (response.direction == "down" && response.index == 2 && appended1 == false){
 
 				var c = 0;
@@ -258,6 +269,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -346,6 +358,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -375,8 +388,8 @@
 							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
-							    	console.log("here2");
-							    	console.log(e);
+//							    	console.log("here2");
+//							    	console.log(e);
 							    	d3.select("#e" + e)
 							    	.transition()
 							    	.duration(500)
@@ -436,6 +449,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -525,6 +539,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -532,7 +547,7 @@
 				           	if (d.if_female === 1){
 
 				           		g = g + 1;
-				           		console.log(g);
+//				           		console.log(g);
 					           	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
@@ -593,7 +608,6 @@
 							    	.attr("r", 5);
 							    });
 					        }
-
 			        	}
 
 			    	}
@@ -618,6 +632,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -636,23 +651,24 @@
 					            .attr("class", "planet minority")
 					            .style("fill", "#1db954");
 
-					            d3.select("#step8").append("div")
-					            .html(d.title + "<br/>")
-					            .style("color", "grey")
-					            .style("font-family", "Courier")
-					            .on("mouseover", function(d){
-							    	d3.select("#i" + p)
-							    	.transition()
-							    	.attr("fill", "#92bcea")
-							    	.duration(500)
-							    	.attr("r", 10);
-						    	})
-							    .on("mouseout", function(d){
-							    	d3.select("#i" + p)
-							    	.transition()
-							    	.duration(500)
-							    	.attr("r", 5);
-							    });
+					           	d3.select("#step8").append("div")
+									.html(d.title + "<br/>")
+									.style("color", "grey")
+									.style("font-family", "Courier")
+									.on("mouseover", function(d){
+										d3.select("#i" + p)
+										.transition()
+										.attr("fill", "#92bcea")
+										.duration(500)
+										.attr("r", 10);
+									})
+									.on("mouseout", function(d){
+										d3.select("#i" + p)
+										.transition()
+										.duration(500)
+										.attr("r", 5);
+									});
+
 
 					        } else if (d.if_black === 1) {
 
@@ -696,24 +712,30 @@
 
 			}
 
-			else if (response.index == 8){
-			    var l=0;
+			else if (response.direction == "down" && response.index == 8 && appended6 == false){
+//			    minorityScroller=minorityScroller+1;
+//			    console.log(minorityScroller);
+//			    if(minorityScroller===1){
+			     	var l=0;
 				var m=0;
-
+				var minorityCounter=0;
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
 					if ((+formatYear(d.time)) >= 1999 && (+formatYear(d.time)) < 2009){
+
 			            d3.select(this)
 			            .append("circle")
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
-
-			            if (d.if_female === 1 || d.if_black === 1) {
-
-				           	if (d.if_female === 1){
+			            console.log(minorityScroller);
+						 	if (d.if_female === 1 || d.if_black === 1) {
+							minorityCounter=minorityCounter+1;
+							if(minorityCounter<11||minorityCounter>23){
+								if (d.if_female === 1){
 								l=l+1;
 								var r=l;
 					           	d3.select(this)
@@ -773,31 +795,30 @@
 							    	.duration(500)
 							    	.attr("r", 5);
 							    });
-
 					        }
+							}
+							else if(minorityCounter>15&&minorityCounter<21){
+							     	d3.select("#step9").append("div")
+									   .style("font-size",10+"px")
+									   .style("color","white")
+									   .style("opacity",0.5)
+									   .html("o"+"<br/>");
+							}
 
 			        	}
-
-			        	if (appended6 == false){
-
-				        	d3.select("#step9").append("text")
-					            .text(d.title + "  ")
-					            .style("color", "grey")
-					            .style("font-size", "5pt")
-					            .style("font-family", "Courier");
-
-					    }
-					}
+						}
 				});
 
 				appended6 = true;
+//				}
 			}
 
-			else if (response.index == 9){
+			else if (response.direction == "down" && response.index == 9 && appended7 == false){
 
 			    var n=0;
 				var oo=0;
-
+				minorityCounter=0;
+//				minorityScroller=0;
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
@@ -808,11 +829,13 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
-
-				           	if (d.if_female === 1){
+							minorityCounter=minorityCounter+1;
+							if(minorityCounter<11||minorityCounter>49){
+							    if (d.if_female === 1){
 								n=n+1;
 								var t=n;
 					           	d3.select(this)
@@ -873,17 +896,19 @@
 							    });
 
 					        }
+							}
+							else if(minorityCounter>15&&minorityCounter<21){
+//							    minorityScroller=minorityScroller+1;
+//							    if(minorityScroller===1){
+							     	d3.select("#step10").append("div")
+									   .style("font-size",10+"px")
+									   .style("color","white")
+									   .style("opacity",0.5)
+									   .html("o"+"<br/>");
+//								}
+							}
+
 			        	}
-
-			    		if (appended7 == false){
-
-				        	d3.select("#step10").append("text")
-					            .text(d.title + "  ")
-					            .style("color", "grey")
-					            .style("font-size", "4pt")
-					            .style("font-family", "Courier");
-
-						}
 					}
 
 				});
@@ -897,19 +922,19 @@
 						d.speed = 0;
                         });
 				d3.selectAll("g.planet").selectAll("circle")
-					.filter(function(d){return d.title!=="I Am Legend"})
+					.filter(function(d){return d.title!=="Black Panther"})
 					.transition()
 					.duration(500)
 					.style("opacity",0.1);
 				d3.selectAll("g.planet").selectAll("circle")
-					.filter(function(d){return d.title==="I Am Legend"})
+					.filter(function(d){return d.title==="Black Panther"})
 					.transition()
 					.duration(500)
 					.attr("r",10);
 
 
 				var zoom, zoomable_layer;
-				  var amp=1.5;
+				  var amp=1;
 				  zoomable_layer = svg;
 
 				  zoom = d3.zoom().scaleExtent([1, 10]).on('zoom', function() {
@@ -927,8 +952,8 @@
 				  };
 					var center, transform;
 					center = {
-					  x: d3.select("#m1").node().getBoundingClientRect().x,
-					  y: d3.select("#m1").node().getBoundingClientRect().y
+					  x: d3.select("#oo1").node().getBoundingClientRect().x,
+					  y: d3.select("#oo1").node().getBoundingClientRect().y
 					};
 					transform = to_bounding_box(width, height, center);
 					svg.transition().duration(2000).call(zoom.transform, transform);
@@ -1112,14 +1137,14 @@
 		        d3.select("#canvas")
 			    .append("circle")
 				.attr("r", 5)
-				.attr("cx", 800)
+				.attr("cx", 940)
 				.attr("cy", 50)
 				.style("fill", "#1db954");
 
 				d3.select("#canvas")
 				.append("text")
 				.text("female lead")
-				.attr("x", 810)
+				.attr("x", 950)
 				.attr("y", 55)
 				.style("font-family", "Courier")
 				.style("fill", "white");
@@ -1127,14 +1152,14 @@
 				d3.select("#canvas")
 			    .append("circle")
 				.attr("r", 5)
-				.attr("cx", 800)
+				.attr("cx", 940)
 				.attr("cy", 70)
 				.style("fill", "#92bcea");
 
 				d3.select("#canvas")
 				.append("text")
 				.text("minority lead")
-				.attr("x", 811)
+				.attr("x", 950)
 				.attr("y", 75)
 				.style("font-family", "Courier")
 				.style("fill", "white");
@@ -1142,14 +1167,14 @@
 				d3.select("#canvas")
 			    .append("circle")
 				.attr("r", 5)
-				.attr("cx", 800)
+				.attr("cx", 940)
 				.attr("cy", 90)
 				.style("fill", "white");
 
 				d3.select("#canvas")
 				.append("text")
 				.text("male/Caucasian")
-				.attr("x", 810)
+				.attr("x", 950)
 				.attr("y", 95)
 				.style("font-family", "Courier")
 				.style("fill", "white");
@@ -1157,7 +1182,7 @@
 				d3.select("#canvas")
 				.append("text")
 				.text("lead")
-				.attr("x", 810)
+				.attr("x", 950)
 				.attr("y", 115)
 				.style("font-family", "Courier")
 				.style("fill", "white");
