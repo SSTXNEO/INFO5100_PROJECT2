@@ -101,23 +101,22 @@
 		}
 
 		.step p {
-			padding-top: 150px;
-			padding-left: 50px;
-			text-align: center;
+			padding: 150px 0 50px 50px;
+			margin: auto 0;
+			/*text-align: center;*/
 			font-size: 1.5rem;
 			font-family: Courier;
 			color: #fff;
 		}
 
-		.step div {
+		.step div{
 			text-align: center;
-/*			padding-top: 5px;
-*/		}
-
-		.step span {
-			margin: auto 0;
+			padding-top: 10px
 		}
 
+		.step span{
+			margin:auto 0;
+		}
 		.orbit {
 	       stroke : #000000;
 	       fill : none;
@@ -145,7 +144,7 @@
 <body>
 	<section id='scroll'>
 		<div class='scroll__graphic'>
-			<div class='chart' id="planetarium">
+			<div class='chart'>
 				<p></p>
 			</div>
 		</div>
@@ -156,18 +155,15 @@
 			</div>
 			<div class='step' data-step='2' id='step2'>
 				<p>We explored all time domestic box office results and selected <span style="color:#1db954">500 highest-grossing</span> movies, with the <span style="color:#1db954">oldest</span> ones being <span style="color:#1db954">closest to the center</span> and the <span style="color:#1db954">most current</span> ones <span style="color:#1db954">outside the outermost orbit</span>. We chose the <span style="color:#1db954">first actor/actress listed on IMDb</span> for the movie as the <span style="color:#1db954">leading</span> one.</p>
-				<p><span style="color:#1db954">Faster-moving</span> dots indicate <span style="color:#1db954">lower</span> box office and vice versa. </p>
 			</div>
 			<div class='step' data-step='3' id='step3'>
-				<p>From <span style="color:#1db954">1937</span> to <span style="color:#1db954">1949</span>, <span style="color:#1db954">no</span><span style="color:#92bcea">ne</span> of the movies contains <span style="color:#1db954">female</span> lead or <span style="color:#92bcea">minority</span> lead actor/actress. </p>
+				<p>From <span style="color:#1db954">1937</span> to <span style="color:#1db954">1949</span>, <span style="color:#1db954">None</span> of the movies contain<span style="color:#1db954"> female</span> lead actress. <span style="color:#92bcea">1/3</span> of the movies contain <span style="color:#92bcea">minority</span> lead actor/actress.</p>
 			</div>
 			<div class='step' data-step='4' id='step4'>
-				<p>From <span style="color:#1db954">1950</span> to <span style="color:#1db954">1959</span>, <span style="color:#1db954">no</span><span style="color:#92bcea">ne</span> of the movies contains <span style="color:#1db954">female</span> lead or <span style="color:#92bcea">minority</span> lead actor/actress. </p>
-				<p>Hover over <span style="color:#1db954">movie titles</span> on the next pages to find out dots' location on the graph. </p>
-				<p>Hover over <span style="color:#92bcea">dots</span> on the next pages to highlight the movie title on the left. </br> </br> <span style="font-size:8pt">*We only include titles for colored dots. </span></p>
+				<p>From <span style="color:#1db954">1950</span> to <span style="color:#1db954">1959</span>, <span style="color:#1db954">none</span> of the movies contains female lead or minority lead actor/actress. </p>
 			</div>
 			<div class='step' data-step='5' id='step5'>
-				<p>From <span style="color:#1db954">1960</span> to <span style="color:#1db954">1969</span>, <span style="color:#1db954">1/2</span> of the movies contain<span style="color:#1db954"> female</span> lead actress. <span style="color:#92bcea">None</span> of the movies contain <span style="color:#92bcea">minority</span> lead actor/actress. Note that only 2 movies are in this bracket after filtering.</p>
+				<p>From <span style="color:#1db954">1960</span> to <span style="color:#1db954">1969</span>, <span style="color:#1db954">1/2</span> of the movies contain<span style="color:#1db954"> female</span> lead actress. <span style="color:#92bcea">None</span> of the movies contain <span style="color:#92bcea">minority</span> lead actor/actress.</p>
 			</div>
 			<div class='step' data-step='6' id='step6'>
 				<p>From <span style="color:#1db954">1970</span> to <span style="color:#1db954">1979</span>, <span style="color:#1db954">1/9</span> of the movies contain<span style="color:#1db954"> female</span> lead actress. <span style="color:#92bcea">None</span> of the movies contain <span style="color:#92bcea">minority</span> lead actor/actress.</p>
@@ -179,22 +175,16 @@
 				<p>From <span style="color:#1db954">1990</span> to <span style="color:#1db954">1999</span>, <span style="color:#1db954">6/68</span> of the movies contain<span style="color:#1db954"> female</span> lead actress. <span style="color:#92bcea">3/68</span> of the movies contain <span style="color:#92bcea">minority</span> lead actor/actress.</p>
 			</div>
 			<div class='step' data-step='9' id='step9'>
-				<p>From <span style="color:#1db954">1999</span> to <span style="color:#1db954">2009</span>, <span style="color:#1db954">19/170</span> of the movies contain<span style="color:#1db954"> female</span> lead actress. <span style="color:#92bcea">14/170</span> of the movies contain <span style="color:#92bcea">minority</span> lead actor/actress.</p>
+				<p>From <span style="color:#1db954">1990</span> to <span style="color:#1db954">1999</span>, <span style="color:#1db954">19/170</span> of the movies contain<span style="color:#1db954"> female</span> lead actress. <span style="color:#92bcea">14/170</span> of the movies contain <span style="color:#92bcea">minority</span> lead actor/actress.</p>
 			</div>
 			<div class='step' data-step='10' id='step10'>
 				<p>From <span style="color:#1db954">2009</span> to <span style="color:#1db954">2018</span>, <span style="color:#1db954">39/223</span> of the movies contain<span style="color:#1db954"> female</span> lead actress. <span style="color:#92bcea">20/223</span> of the movies contain <span style="color:#92bcea">minority</span> lead actor/actress.</p>
 			</div>
 			<div class='step' data-step='11' id='step11'>
-				<p>Despite the emergence of film and television series heralded for their diversity, Darnell Hunt, sociologist and co-author of UCLA's 2018 Hollywood Diversity Report, maintains <span style="color:#1db954">little has changed </span> both in front of and behind the camera.</p>
+				<p>Despite the emergence of film and television series heralded for their diversity, Darnell Hunt, sociologist and co-author of UCLA's 2018 Hollywood Diversity Report, maintains little has changed both in front of and behind the camera.</p>
 			</div>
 			<div class='step' data-step='12' id='step12'>
 				<p>However, we do notice some trends from our data...</p>
-			</div>
-			<div class='step' data-step='13' id='step13'>
-				<p>Out of the top 15 movies with the highest box office, only 3 of them contain a <span style="color:#1db954">female</span> lead - <span style="color:#1db954">Rogue One: A Star Wars Story (2016)</span>, <span style="color:#1db954">Beauty and the Beast (2017)</span>, and <span style="color:#1db954">Finding Dory (2016)</span>; and only 1 of them contains a <span style="color:#92bcea">minority lead</span> - <span style="color:#92bcea">Black Panther (2018)</span>. Note that they're all very recent, and it seems to suggest that people are paying attention to diversity problems in Hollywood. </p>
-			</div>
-			<div class='step' data-step='14' id='step14'>
-				<p>However, this is not conclusive - one possible explanation is that recent movies tend to have higher box office, and movies in the past might use female/minority lead but they just did not make it to our list. For more comprehensive results, more data and further analysis is needed.</p>
 			</div>
  		</div>
 	</section>
@@ -203,16 +193,22 @@
 	<script src='https://unpkg.com/intersection-observer'></script>
 	<script src='https://unpkg.com/scrollama'></script>
 	<script src="https://d3js.org/d3-selection-multi.v0.4.min.js"></script>
+
 	<script>
-		// We used a d3 library called Scrollama for the basic scrollytelling style of our project. However since it's so integrated with our own code it's nearly impossible to store the library in a separate JS file
+		var width = 1200, height = 900;
+		    var t0 = Date.now();
+		    var svg = d3.select(".chart")
+		    .insert("svg")
+		    .attr("width", width)
+		    .attr("height", height)
+		    .attr("id", "canvas");
+		// using d3 for convenience
 		var container = d3.select('#scroll');
 		var graphic = container.select('.scroll__graphic');
 		var chart = graphic.select('.chart');
 		var text = container.select('.scroll__text');
 		var step = text.selectAll('.step');
-		// format the year
 		var formatYear=d3.timeFormat("%Y");
-		// stop appending the narratives twice 
 		var appended1 = false;
 		var appended2 = false;
 		var appended3 = false;
@@ -221,32 +217,11 @@
 		var appended6 = false;
 		var appended7 = false;
 
-		// containers sizes
-		var w = 1000, h = 900;
-		var width = 1200, height = 900;
-
-		// for phi0
-		var t0 = Date.now();
-
-		var svg = d3.select(".chart")
-		.insert("svg")
-		.attr("width", w)
-		.attr("height", h)
-		.attr("id", "canvas");
-
-		svg.append("circle")
-		.attr("r", 10)
-		.attr("cx", w/2)
-		.attr("cy", h/2)
-		.attr("class", "sun");
-		var div = d3.select("#planetarium");
-
-		// initialize the scrollama - library
+		// initialize the scrollama
 		var scroller = scrollama();
 
-		// generic window resize listener event - library
+		// generic window resize listener event
 		function handleResize() {
-
 			// 1. update height of step elements
 			var stepHeight = Math.floor(window.innerHeight);
 			step.style('height', stepHeight + 'px');
@@ -270,91 +245,20 @@
 			scroller.resize();
 		}
 
-		// scrollama event handlers - library with customized steps
+		// scrollama event handlers
 		function handleStepEnter(response) {
 			// response = { element, direction, index }
 
 			// add color to current step only
 			step.classed('is-active', function (d, i) {
 				return i === response.index;
-			})
+			});
 
-			// originally for scrolling up and stop the animation, however do not have time to fully implement
-			// if (response.direction == "up" && response.index < 2){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-
-			// 		if ((+formatYear(d.time)) >= 1937 && (+formatYear(d.time)) < 1949){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// } else if (response.direction == "up" && response.index < 4){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-
-			// 		if ((+formatYear(d.time)) >= 1959 && (+formatYear(d.time)) < 1969){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// } else if (response.direction == "up" && response.index < 5){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-
-			// 		if ((+formatYear(d.time)) >= 1969 && (+formatYear(d.time)) < 1979){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// } else if (response.direction == "up" && response.index < 6){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-
-			// 		if ((+formatYear(d.time)) >= 1979 && (+formatYear(d.time)) < 1989){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// } else if (response.direction == "up" && response.index < 7){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-
-			// 		if ((+formatYear(d.time)) >= 1989 && (+formatYear(d.time)) < 1999){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// } else if (response.direction == "up" && response.index < 8){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-
-			// 		if ((+formatYear(d.time)) >= 1999 && (+formatYear(d.time)) <= 2009){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// } else if (response.direction == "up" && response.index < 9){
-
-			// 	chart.selectAll("g.planet")
-			// 	.each(function(d, i){
-			// 		if ((+formatYear(d.time)) >= 2009 && (+formatYear(d.time)) < 2019){
-
-			// 			d3.select(this).remove();
-			// 		}
-			// 	});
-			// }
+			var minorityScroller=0;
 
 			if (response.direction == "down" && response.index == 2 && appended1 == false){
 
 				var c = 0;
-
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
@@ -365,6 +269,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -389,7 +294,7 @@
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
 							    	d3.select("#c" + c)
@@ -408,7 +313,7 @@
 					            .attr("cy", 0)
 					            .attr("id", "d"+dd)
 					            .attr("class", "planet minority")
-					            .style("fill", "#fff");
+					            .style("fill", "#92bcea");
 
 					            d3.select("#step3").append("div")
 					            .html(d.title + "<br/>")
@@ -419,7 +324,7 @@
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
 							    	d3.select("#d" + dd)
@@ -453,6 +358,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -468,21 +374,7 @@
 					            .attr("cy", 0)
 					            .attr("id", "e"+e)
 					            .attr("class", "planet minority")
-					            .style("fill", "#1db954")
-					            .on("mouseover", function (d) {
-					            	d3.select("#step5").select("div")
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 1);
-					            })
-					            .on("mouseout", function(d) {
-					            	d3.select("#step5").select("div")
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 0.3)
-					            });
+					            .style("fill", "#1db954");
 
 					            d3.select("#step5").append("div")
 					            .html(d.title + "<br/>")
@@ -493,11 +385,11 @@
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
-							    	console.log("here2");
-							    	console.log(e);
+//							    	console.log("here2");
+//							    	console.log(e);
 							    	d3.select("#e" + e)
 							    	.transition()
 							    	.duration(500)
@@ -524,7 +416,7 @@
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
 							    	d3.select("#e" + e)
@@ -557,6 +449,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -572,21 +465,7 @@
 					            .attr("cy", 0)
 					            .attr("id", "f"+f)
 					            .attr("class", "planet minority")
-					            .style("fill", "#1db954")
-					            .on("mouseover", function (d) {
-					            	d3.select("#step6").select("div")
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 1);
-					            })
-					            .on("mouseout", function(d) {
-					            	d3.select("#step6").select("div")
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 0.3);
-					            });
+					            .style("fill", "#1db954");
 
 					            d3.select("#step6").append("div")
 					            .html(d.title + "<br/>")
@@ -597,7 +476,7 @@
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
 							    	d3.select("#f" + f)
@@ -626,7 +505,7 @@
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
 							    	d3.select("#f" + f)
@@ -648,7 +527,7 @@
 			else if (response.direction == "down" && response.index == 6 && appended4 == false){
 
 			    var g = 0;
-				var h = g + 1;
+				var h = 0;
 
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
@@ -660,6 +539,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -667,7 +547,7 @@
 				           	if (d.if_female === 1){
 
 				           		g = g + 1;
-
+//				           		console.log(g);
 					           	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
@@ -675,34 +555,18 @@
 					            .attr("cy", 0)
 					            .attr("id", "g"+g)
 					            .attr("class", "planet minority")
-					            .style("fill", "#1db954")
-					            .on("mouseover", function (d) {
-					            	d3.select("#step7").select("#title"+g)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 1);
-					            })
-					            .on("mouseout", function(d) {
-					            	d3.select("#step7").select("#title"+g)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 0.3)
-					            });
-
+					            .style("fill", "#1db954");
 
 					            d3.select("#step7").append("div")
-					            .html(d.title + " ")
+					            .html(d.title + "<br/>")
 					            .style("color", "grey")
 					            .style("font-family", "Courier")
-					            .attr("id", "title"+g)
 					            .on("mouseover", function(d){
 							    	d3.select("#g" + g)
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
 							    	d3.select("#g" + g)
@@ -712,54 +576,38 @@
 							    });
 
 					        } else if (d.if_black === 1) {
-
-								h = h + 1;
-
-								var o = h;
+								h=h+1;
+//								console.log(h);
+								var o=h;
 					        	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
-					            .attr("id", "o"+o)
+					            .attr("id", "h"+h)
 					            .attr("cy", 0)
 					            .attr("class", "planet minority")
-					            .style("fill", "#92bcea")
-					            .on("mouseover", function (d) {
-					            	d3.select("#step7").select("#title"+o)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 1);
-					            })
-					            .on("mouseout", function(d) {
-					            	d3.select("#step7").select("#title"+o)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 0.3)
-					            });
+					            .style("fill", "#92bcea");
 
 
 					            d3.select("#step7").append("div")
-					            .html(d.title + " ")
+					            .html(d.title + "<br/>")
 					            .style("color", "grey")
-					            .attr("id", "title"+o)
 					            .style("font-family", "Courier")
 					            .on("mouseover", function(d){
-							    	d3.select("#o" + o)
+//					                console.log(z);
+							    	d3.select("#h" + o)
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
-							    	d3.select("#o" + o)
+							    	d3.select("#h" + o)
 							    	.transition()
 							    	.duration(500)
 							    	.attr("r", 5);
 							    });
 					        }
-
 			        	}
 
 			    	}
@@ -784,6 +632,7 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
@@ -791,94 +640,64 @@
 				           	if (d.if_female === 1){
 
 				           		j = j + 1;
-
-				           		var p = j;
-
+				           		var p=j;
+//				           		console.log(i);
 					           	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
 					            .attr("cy", 0)
-					            .attr("id", "p" + p)
+					            .attr("id", "i"+p)
 					            .attr("class", "planet minority")
-					            .style("fill", "#1db954")
-					            .on("mouseover", function (d) {
-					            	d3.select("#step8").select("#title"+p)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 1);
-					            })
-					            .on("mouseout", function(d) {
-					            	d3.select("#step8").select("#title"+p)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 0.3)
-					            });
+					            .style("fill", "#1db954");
 
-					            d3.select("#step8").append("div")
-					            .html(d.title + " ")
-					            .attr("id", "title"+ p)
-					            .style("color", "grey")
-					            .style("font-family", "Courier")
-					            .on("mouseover", function(d){
-							    	d3.select("#p" + p)
-							    	.transition()
-							    	.attr("fill", "#92bcea")
-							    	.duration(500)
-							    	.attr("r", 15);
-						    	})
-							    .on("mouseout", function(d){
-							    	d3.select("#p" + p)
-							    	.transition()
-							    	.duration(500)
-							    	.attr("r", 5);
-							    });
+					           	d3.select("#step8").append("div")
+									.html(d.title + "<br/>")
+									.style("color", "grey")
+									.style("font-family", "Courier")
+									.on("mouseover", function(d){
+										d3.select("#i" + p)
+										.transition()
+										.attr("fill", "#92bcea")
+										.duration(500)
+										.attr("r", 10);
+									})
+									.on("mouseout", function(d){
+										d3.select("#i" + p)
+										.transition()
+										.duration(500)
+										.attr("r", 5);
+									});
+
 
 					        } else if (d.if_black === 1) {
 
 					        	k = k + 1;
-
-								var q = k;
-					        	
+								var q=k;
 					        	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
-					            .attr("id", "q"+ q)
+					            .attr("id", "j"+q)
 					            .attr("cy", 0)
 					            .attr("class", "planet minority")
-					            .style("fill", "#92bcea")
-					            .on("mouseover", function (d) {
-					            	d3.select("#step8").select("#title"+q)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 1);
-					            })
-					            .on("mouseout", function(d) {
-					            	d3.select("#step8").select("#title"+q)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 0.3)
-					            });
+					            .style("fill", "#92bcea");
+
+//					            console.log(j);
 
 					            d3.select("#step8").append("div")
-					            .html(d.title + " ")
-					            .attr("id", "title" + q)
+					            .html(d.title + "<br/>")
 					            .style("color", "grey")
 					            .style("font-family", "Courier")
 					            .on("mouseover", function(d){
-							    	d3.select("#q" + q)
+							    	d3.select("#j" + q)
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
-							    	d3.select("#q" + q)
+							    	d3.select("#j" + q)
 							    	.transition()
 							    	.duration(500)
 							    	.attr("r", 5);
@@ -894,54 +713,42 @@
 			}
 
 			else if (response.direction == "down" && response.index == 8 && appended6 == false){
-			    var l=0;
+//			    minorityScroller=minorityScroller+1;
+//			    console.log(minorityScroller);
+//			    if(minorityScroller===1){
+			     	var l=0;
 				var m=0;
-
+				var minorityCounter=0;
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
 					if ((+formatYear(d.time)) >= 1999 && (+formatYear(d.time)) < 2009){
+
 			            d3.select(this)
 			            .append("circle")
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
-
-			            if (d.if_female === 1 || d.if_black === 1) {
-
-				           	if (d.if_female === 1){
-								
-								l = l + 1;
-								
-								var r = l;
-					           	
+			            console.log(minorityScroller);
+						 	if (d.if_female === 1 || d.if_black === 1) {
+							minorityCounter=minorityCounter+1;
+							if(minorityCounter<11||minorityCounter>23){
+								if (d.if_female === 1){
+								l=l+1;
+								var r=l;
 					           	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
 					            .attr("cy", 0)
-								.attr("id","l" + r)
+								.attr("id","l"+r)
 					            .attr("class", "planet minority")
-					            .style("fill", "#1db954")
-					            .on("mouseover", function (d) {
-					            	d3.select("#step9").select("#title" + r)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 1);
-					            })
-					            .on("mouseout", function(d) {
-					            	d3.select("#step9").select("#title" + r)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 0.3)
-					            });
+					            .style("fill", "#1db954");
 
 					           	d3.select("#step9").append("div")
-					            .html(d.title + " ")
-					            .attr("id", "title" + r)
+					            .html(d.title + "<br/>")
 					            .style("color", "grey")
 					            .style("font-family", "Courier")
 					            .on("mouseover", function(d){
@@ -949,7 +756,7 @@
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
 							    	d3.select("#l" + r)
@@ -960,36 +767,19 @@
 
 					        } else if (d.if_black === 1) {
 
-				           	    m = m + 1;
-
-				           	    var s = m;
-					        	
+				           	    m=m+1;
+				           	    var s=m;
 					        	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
 					            .attr("cy", 0)
-								.attr("id","m" + s)
+								.attr("id","m"+s)
 					            .attr("class", "planet minority")
-					            .style("fill", "#92bcea")
-					            .on("mouseover", function (d) {
-					            	d3.select("#step9").select("#title" + s)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 1);
-					            })
-					            .on("mouseout", function(d) {
-					            	d3.select("#step9").select("#title" + s)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 0.3)
-					            });
+					            .style("fill", "#92bcea");
 
 					        	d3.select("#step9").append("div")
-					            .html(d.title + " ")
-					            .attr("id", "title" + s)
+					            .html(d.title + "<br/>")
 					            .style("color", "grey")
 					            .style("font-family", "Courier")
 					            .on("mouseover", function(d){
@@ -997,7 +787,7 @@
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
 							    	d3.select("#m" + s)
@@ -1005,21 +795,30 @@
 							    	.duration(500)
 							    	.attr("r", 5);
 							    });
-
 					        }
+							}
+							else if(minorityCounter>15&&minorityCounter<21){
+							     	d3.select("#step9").append("div")
+									   .style("font-size",10+"px")
+									   .style("color","white")
+									   .style("opacity",0.5)
+									   .html("o"+"<br/>");
+							}
 
 			        	}
-					}
+						}
 				});
 
 				appended6 = true;
+//				}
 			}
 
 			else if (response.direction == "down" && response.index == 9 && appended7 == false){
 
 			    var n=0;
 				var oo=0;
-
+				minorityCounter=0;
+//				minorityScroller=0;
 				chart.selectAll("g.planet")
 				.each(function(d, i) {
 
@@ -1030,51 +829,34 @@
 			            .attr("r", d.r)
 			            .attr("cx", d.R)
 			            .attr("cy", 0)
+						.style("opacity",0.3)
 			            .attr("class", "planet");
 
 			            if (d.if_female === 1 || d.if_black === 1) {
-
-				           	if (d.if_female === 1){
-								
-								n = n + 1;
-								
-								var t = n;
-					           	
+							minorityCounter=minorityCounter+1;
+							if(minorityCounter<11||minorityCounter>49){
+							    if (d.if_female === 1){
+								n=n+1;
+								var t=n;
 					           	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
 					            .attr("cy", 0)
-								.attr("id","n" + t)
+								.attr("id","n"+t)
 					            .attr("class", "planet minority")
-					            .style("fill", "#1db954")
-					            .on("mouseover", function (d) {
-					            	d3.select("#step10").select("#title" + t)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 1);
-					            })
-					            .on("mouseout", function(d) {
-					            	d3.select("#step10").select("#title" + t)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 0.3)
-					            });
+					            .style("fill", "#1db954");
 
 					           	d3.select("#step10").append("div")
-					            .html(d.title + " ")
-					            .attr("id", "title" + t)
+					            .html(d.title + "<br/>")
 					            .style("color", "grey")
-					            .style("font-size", "7pt")
 					            .style("font-family", "Courier")
 					            .on("mouseover", function(d){
 							    	d3.select("#n" + t)
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
 							    	d3.select("#n" + t)
@@ -1084,46 +866,27 @@
 							    });
 
 					        } else if (d.if_black === 1) {
-								
-								oo = oo + 1;
-								
-								var u = oo;
-					        	
+								oo=oo+1;
+								var u=oo;
 					        	d3.select(this)
 					            .append("circle")
 					            .attr("r", d.r)
 					            .attr("cx", d.R)
 					            .attr("cy", 0)
-								.attr("id","oo" + u)
+								.attr("id","oo"+u)
 					            .attr("class", "planet minority")
-					            .style("fill", "#92bcea")
-					            .on("mouseover", function (d) {
-					            	d3.select("#step10").select("#title" + u)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 1);
-					            })
-					            .on("mouseout", function(d) {
-					            	d3.select("#step10").select("#title" + u)
-					            	.transition()
-					            	.duration(500)
-					            	.style("color", "#fff")
-					            	.style("opacity", 0.3)
-					            });
+					            .style("fill", "#92bcea");
 
 					        	d3.select("#step10").append("div")
-					            .html(d.title + " ")
-					            .attr("id", "title" + u)
+					            .html(d.title + "<br/>")
 					            .style("color", "grey")
-					            .style("font-size", "7pt")
 					            .style("font-family", "Courier")
 					            .on("mouseover", function(d){
 							    	d3.select("#oo" + u)
 							    	.transition()
 							    	.attr("fill", "#92bcea")
 							    	.duration(500)
-							    	.attr("r", 15);
+							    	.attr("r", 10);
 						    	})
 							    .on("mouseout", function(d){
 							    	d3.select("#oo" + u)
@@ -1133,8 +896,19 @@
 							    });
 
 					        }
-			        	}
+							}
+							else if(minorityCounter>15&&minorityCounter<21){
+//							    minorityScroller=minorityScroller+1;
+//							    if(minorityScroller===1){
+							     	d3.select("#step10").append("div")
+									   .style("font-size",10+"px")
+									   .style("color","white")
+									   .style("opacity",0.5)
+									   .html("o"+"<br/>");
+//								}
+							}
 
+			        	}
 					}
 
 				});
@@ -1142,58 +916,54 @@
 				appended7 = true;
 			}
 
-			// zoom in and highlight animation
-
-			else if (response.direction == "down" && response.index == 12){
-
+			if (response.index == 11){
 			    d3.selectAll("g.planet")
-				.each(function(d) {
-					d.speed = 0;
-                });
-
+					.each(function(d) {
+						d.speed = 0;
+                        });
 				d3.selectAll("g.planet").selectAll("circle")
-				.filter(function(d){return (d.title!=="Black Panther") || (d.title!=="Rogue One: A Star Wars Story") || (d.title!=="Beauty and the Beast&y=2017") || (d.title!=="Finding Dory") })
-				.transition()
-				.duration(500)
-				.style("opacity",0.1);
-				
+					.filter(function(d){return d.title!=="Black Panther"})
+					.transition()
+					.duration(500)
+					.style("opacity",0.1);
 				d3.selectAll("g.planet").selectAll("circle")
-				.filter(function(d){ return (d.title==="Black Panther") || (d.title==="Rogue One: A Star Wars Story") || (d.title==="Beauty and the Beast&y=2017") || (d.title==="Finding Dory") })
-				.transition()
-				.duration(500)
-				.attr("r",10);
+					.filter(function(d){return d.title==="Black Panther"})
+					.transition()
+					.duration(500)
+					.attr("r",10);
 
-				// var zoom, zoomable_layer;
-				// var amp = 1;
-				// zoomable_layer = svg;
-				// zoom = d3.zoom().scaleExtent([1, 10]).on('zoom', function() {
-					
-				// 	return zoomable_layer.attrs({
-				// 		transform: d3.event.transform
-				// 	});
-				// });
 
-				// svg.call(zoom);
-				// to_bounding_box = function(W, H, center) {
-				// 	var x, y;
-				// 	x = W / 2 - center.x*amp;
-				// 	y = H / 2 - center.y*amp;
-				// 	return d3.zoomIdentity.translate(x,y).scale(amp);
-				// };
-				// var center, transform;
-				// center = {
-				// 	x: d3.select("#m1").node().getBoundingClientRect().x,
-				// 	y: d3.select("#m1").node().getBoundingClientRect().y
-				// };
+				var zoom, zoomable_layer;
+				  var amp=1;
+				  zoomable_layer = svg;
 
-				// transform = to_bounding_box(width, height, center);
-				// svg.transition().duration(2000).call(zoom.transform, transform);
+				  zoom = d3.zoom().scaleExtent([1, 10]).on('zoom', function() {
+					return zoomable_layer.attrs({
+					  transform: d3.event.transform
+					});
+				  });
+				  svg.call(zoom);
 
+					to_bounding_box = function(W, H, center) {
+					var x, y;
+					x = W / 2 - center.x*amp;
+					y = H / 2 - center.y*amp;
+					return d3.zoomIdentity.translate(x,y).scale(amp);
+				  };
+					var center, transform;
+					center = {
+					  x: d3.select("#oo1").node().getBoundingClientRect().x,
+					  y: d3.select("#oo1").node().getBoundingClientRect().y
+					};
+					transform = to_bounding_box(width, height, center);
+					svg.transition().duration(2000).call(zoom.transform, transform);
+
+//				  console.log(d3.select("#h1").node().getBoundingClientRect());
 			}
+
 
 		}
 
-		// library
 		function handleContainerEnter(response) {
 			// response = { direction }
 
@@ -1202,7 +972,6 @@
 			graphic.classed('is-bottom', false);
 		}
 
-		// library
 		function handleContainerExit(response) {
 			// response = { direction }
 
@@ -1211,7 +980,6 @@
 			graphic.classed('is-bottom', response.direction === 'down');
 		}
 
-		// library init function
 		function init() {
 			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
 			handleResize();
@@ -1232,14 +1000,20 @@
 			// setup resize event
 			window.addEventListener('resize', handleResize);
 
+
+
+		    svg.append("circle")
+		    .attr("r", 10)
+		    .attr("cx", width/2)
+		    .attr("cy", height/2)
+		    .attr("class", "sun");
+
 		    var container = svg.append("g")
 		    .attr("class","spinner")
-		    .attr("transform", "translate(" + w/2 + "," + h/2 + ")");
+		    .attr("transform", "translate(" + width/2 + "," + height/2 + ")");
 
-		    // time formatting
 		    var parseTime = d3.timeParse("%d-%b-%Y");
 
-		    // orbit scales
  			var inter1=d3.scaleTime().domain([parseTime("01-Jan-1937"),parseTime("31-Dec-1949")]).range([50, 80]);
       		var inter2=d3.scaleTime().domain([parseTime("01-Jan-1950"),parseTime("31-Dec-1959")]).range([100, 130]);
       		var inter3=d3.scaleTime().domain([parseTime("01-Jan-1960"),parseTime("31-Dec-1969")]).range([150, 180]);
@@ -1249,7 +1023,6 @@
       		var inter7=d3.scaleTime().domain([parseTime("01-Jan-2000"),parseTime("31-Dec-2009")]).range([350, 380]);
       		var inter8=d3.scaleTime().domain([parseTime("01-Jan-2010"),parseTime("01-May-2018")]).range([400, 430]);
 
-      		// speed based on box office
 		    var speedScale=d3.scaleLinear().domain([120908074,1000000000]).range([5,1]);
 
 		    var divisionOrbitData=[90,140,190,240,290,340,390];
@@ -1260,14 +1033,13 @@
           	.attr("class","division")
          	.each(function(d){
              	d3.select(this)
-                .attr("cx", w/2)
-                .attr("cy", h/2)
+                .attr("cx", width/2)
+                .attr("cy", height/2)
                 .attr("r", d)
                 .style("fill","none")
                 .style("stroke","#fff");
           	});
 
-         	// data processing
 		    function parseline(line){
 
 		        var year=+formatYear(parseTime(line.year));
@@ -1309,7 +1081,6 @@
         		}
 		    }
 
-		    // read in csv
 		    d3.csv("./movie_actor.csv",parseline,function(data) {
 
 		        var planets = [];
@@ -1344,7 +1115,6 @@
 
 		        var j = 0;
 
-		        // start and stop the spinning based on click
 		        d3.select("svg#canvas")
 		        .on("click", function(){
 		        	if (j % 2 === 0){
@@ -1364,18 +1134,17 @@
 		        	}
 		        });
 
-		        // legends
 		        d3.select("#canvas")
 			    .append("circle")
 				.attr("r", 5)
-				.attr("cx", 800)
+				.attr("cx", 940)
 				.attr("cy", 50)
 				.style("fill", "#1db954");
 
 				d3.select("#canvas")
 				.append("text")
 				.text("female lead")
-				.attr("x", 810)
+				.attr("x", 950)
 				.attr("y", 55)
 				.style("font-family", "Courier")
 				.style("fill", "white");
@@ -1383,14 +1152,14 @@
 				d3.select("#canvas")
 			    .append("circle")
 				.attr("r", 5)
-				.attr("cx", 800)
+				.attr("cx", 940)
 				.attr("cy", 70)
 				.style("fill", "#92bcea");
 
 				d3.select("#canvas")
 				.append("text")
 				.text("minority lead")
-				.attr("x", 811)
+				.attr("x", 950)
 				.attr("y", 75)
 				.style("font-family", "Courier")
 				.style("fill", "white");
@@ -1398,14 +1167,14 @@
 				d3.select("#canvas")
 			    .append("circle")
 				.attr("r", 5)
-				.attr("cx", 800)
+				.attr("cx", 940)
 				.attr("cy", 90)
 				.style("fill", "white");
 
 				d3.select("#canvas")
 				.append("text")
 				.text("male/Caucasian")
-				.attr("x", 810)
+				.attr("x", 950)
 				.attr("y", 95)
 				.style("font-family", "Courier")
 				.style("fill", "white");
@@ -1413,7 +1182,7 @@
 				d3.select("#canvas")
 				.append("text")
 				.text("lead")
-				.attr("x", 810)
+				.attr("x", 950)
 				.attr("y", 115)
 				.style("font-family", "Courier")
 				.style("fill", "white");
